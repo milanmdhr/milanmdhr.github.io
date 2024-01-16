@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Milan Manandhar</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" integrity="sha512-tYKqO78H3mRRCHa75fms1gBvGlANz0JxjN6fVrMBvWL+vOOy200npwJ69OBl9XEsTu3yVUvZNrdWFIIrIf8FLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+
+    <body>
+        <!--Navigation-->
+        <nav class="fixed z-50 w-full bg-transparent py-6 transition-all duration-300 ease-in-out">
+            <div class="mx-auto max-w-7xl px-4">
+                <div class="relative flex items-center justify-between">
+                    <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
+                        <!-- Mobile menu button-->
+                        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Open main menu</span>
+                            <!--Icon when menu is closed.
+                            Menu open: "hidden", Menu closed: "block" -->
+                            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <!--Icon when menu is open.
+                            Menu open: "block", Menu closed: "hidden" -->
+                            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-between">
+                        <div class="flex flex-shrink-0 items-center">
+                            <a href="index.html"> <img class="h-10 w-auto" src="assets/images/logo.svg" alt="Milan Manandhar" /></a>
+                        </div>
+                        <div class="hidden md:ml-6 md:block">
+                            <div class="flex space-x-4 text-white">
+                                <a href="work.html" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Work</a>
+                                <a href="about.html" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">About</a>
+                                <a href="#services" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Services</a>
+                                <a href="https://medium.com/@milanmdhr" target="_blank" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Blog</a>
+                                <a href="contact.html" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Let's Talk</a>
+                            </div>
+                        </div>
+                        <div class="hidden md:block">
+                            <a href="contact.html" class="inline-flex items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!--Main Content-->
+        <main>
+            <!--Hero-->
+            <div class="home-hero relative h-screen bg-dark bg-[url('../images/hero-background-01.svg')] bg-center bg-no-repeat px-4">
+                <!--Available-->
+                <div class="absolute bottom-12 left-1/2 w-full -translate-x-1/2 md:bottom-auto md:left-0 md:start-0 md:top-1/2 md:mx-10 md:-translate-y-1/2 md:-rotate-90">
+                    <div class="flex items-center justify-center px-2">
+                        <span class="relative mr-3 flex h-3 w-3">
+                            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex h-3 w-3 rounded-full bg-primary"></span>
+                        </span>
+                        <a href="#" class="text-white">Available for new projects</a>
+                    </div>
+                </div>
+                <!--Caption-->
+                <div class="caption mx-auto flex h-full max-w-7xl flex-col items-center justify-center py-8 text-center text-white">
+                    <h1 class="flex items-center text-3xl font-bold text-white md:text-5xl xl:text-8xl">Hey there! I'm Milan. <img src="assets/images/profile-pic.png" class="-mt-8 ml-6 h-12 md:h-16 xl:h-24" /></h1>
+                    <div class="flex items-center space-x-8">
+                        <div class="flex-auto">
+                            <h1 class="text-3xl font-bold md:text-5xl xl:text-8xl">Crafting brands</h1>
+                        </div>
+                        <div class="hidden w-80 flex-auto text-left md:block">
+                            <p class="md:text-sm lg:text-base">I design exceptional brands, products, web apps, mobile apps, websites for startups and enterprises.</p>
+                        </div>
+                    </div>
+                    <h1 class="mb-4 text-3xl font-bold text-white md:mb-8 md:text-5xl xl:text-8xl">and digital experiences</h1>
+
+                    <div class="flex flex-col items-center text-sm font-light uppercase tracking-widest md:flex-row lg:text-xl">
+                        <div class="flex items-center">
+                            <span>A UI/UX Designer based in <span class="font-bold">Nepal</span></span
+                            ><img src="assets/images/nepal-flag.svg" alt="" class="mx-3 h-6" />
+                        </div>
+                        <span>Available Worldwide</span>
+                    </div>
+
+                    <p class="mt-4 text-sm md:hidden">I design exceptional brands, products, web apps, mobile apps, websites for startups and enterprises.</p>
+                    <!--Rotating Scroll-->
+                    <div data-v-1ffa6883="" data-v-1e226fc7="" class="wrap relative mt-4 hidden text-white md:mt-10 md:block">
+                        <svg data-v-1ffa6883="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" class="scroll-text h-auto w-20 animate-spin-slow fill-current md:w-24">
+                            <g data-v-1ffa6883="">
+                                <path data-v-1ffa6883="" d="m12.32,44.08c-.28,2.73-1.5,3.64-3.42,3.44l.18-1.73c1.15.12,1.58-.42,1.73-1.92.11-1.11-.1-1.5-.51-1.54-.55-.06-.89.84-1.38,1.91-.7,1.55-1.27,2.81-2.75,2.65-1.29-.13-1.9-1.23-1.7-3.18.24-2.32,1.53-3.25,3.03-3.09l-.18,1.72c-.92-.09-1.24.59-1.34,1.53-.08.77.04,1.27.42,1.3.34.04.49-.12,1.02-1.3.62-1.35,1.44-3.43,3.02-3.27,1.3.13,2.1,1.14,1.86,3.47Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m6.69,33.59c.7-2.01,2.26-2.96,4.11-2.56l-.57,1.64c-1.01-.17-1.76.42-2.1,1.4-.43,1.25.06,2.34,1.54,2.86,1.49.52,2.56-.04,2.99-1.29.34-.98.1-1.91-.79-2.4l.57-1.64c1.71.83,2.36,2.55,1.66,4.56-.79,2.29-2.89,3.15-4.99,2.42-2.1-.73-3.21-2.69-2.42-4.98Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m15.93,31.31l-6.42-4.12,1.6-2.49c.98-1.53,2.2-2.64,3.64-1.72,1.06.68.79,1.73.39,2.56l.36.23.6-.94c.32-.5.78-.61,1.28-.29l2.05,1.31-.94,1.47-2.26-1.45-1.61,2.51,2.26,1.45-.94,1.47Zm-2.59-3.73l.65-1.02c.56-.87.9-1.4.1-1.92-.8-.51-1.15.02-1.7.89l-.65,1.02,1.6,1.03Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m17.55,16.61c1.73-1.68,3.97-1.49,5.52.11,1.55,1.6,1.68,3.84-.05,5.53-1.74,1.69-3.98,1.49-5.53-.11-1.55-1.59-1.67-3.84.07-5.52Zm4.4,4.54c1.03-1,.9-2.17-.13-3.22-1.02-1.05-2.18-1.22-3.21-.22-1.03,1-.9,2.17.12,3.22,1.02,1.06,2.19,1.23,3.22.22Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m27.82,18.27c-.5.32-.96.22-1.27-.28l-3.59-5.81,1.48-.92,3.27,5.28,3.1-2.04.8,1.3-3.79,2.47Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m33.8,14.99c-.55.22-.98.04-1.19-.52l-2.42-6.38,1.63-.62,2.2,5.81,3.43-1.41.54,1.43-4.19,1.7Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m49.72,8.06c.15,3.28-1.96,3.91-3.99,4l-2.81.13-.34-7.62,2.81-.13c2.03-.09,4.18.34,4.33,3.61Zm-4.06,2.48c1.35-.06,2.42-.22,2.32-2.4-.1-2.17-1.17-2.23-2.52-2.17l-1.07.05.21,4.57,1.07-.05Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m56.42,5.08c2.37.46,3.49,2.41,3.06,4.59-.43,2.19-2.2,3.57-4.57,3.11-2.38-.46-3.5-2.41-3.07-4.6.42-2.18,2.2-3.56,4.57-3.1Zm-1.21,6.2c1.41.28,2.29-.5,2.57-1.94.28-1.43-.24-2.48-1.65-2.76-1.41-.28-2.29.5-2.57,1.93-.28,1.44.24,2.49,1.65,2.77Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m63.12,6.62l1.49.79-2.33,6.91.38.2,4.22-5.9,3.26,1.74-2.57,6.78.38.2,4.46-5.77,1.49.8-4.75,6.11-3.19-1.7,2.53-6.8-.38-.2-4.26,5.88-3.18-1.7,2.44-7.34Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m70.95,20.01l5.42-5.36,2.4,2.43-3.5,6.68.3.31.55-1,4.34-4.29,1.22,1.24-5.42,5.36-2.41-2.44,3.51-6.68-.31-.32-.54,1.01-4.34,4.29-1.22-1.24Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m80.26,29.64c.58-.31,1.25-.16,1.59.49.33.63.1,1.3-.48,1.61-.6.32-1.29.13-1.62-.5-.34-.65-.09-1.29.51-1.6Z" class="cls-1"></path>
+                            </g>
+                            <g data-v-1ffa6883="">
+                                <path data-v-1ffa6883="" d="m83.68,51.92c.28-2.73,1.5-3.64,3.42-3.44l-.18,1.73c-1.15-.12-1.57.42-1.73,1.92-.11,1.11.1,1.5.51,1.54.55.06.89-.84,1.38-1.91.7-1.55,1.26-2.81,2.75-2.65,1.29.13,1.9,1.23,1.7,3.18-.24,2.32-1.53,3.25-3.03,3.09l.18-1.72c.92.09,1.25-.59,1.34-1.53.08-.77-.04-1.27-.42-1.3-.34-.04-.49.12-1.02,1.3-.62,1.35-1.44,3.43-3.02,3.27-1.3-.13-2.1-1.14-1.86-3.47Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m89.31,62.41c-.7,2.01-2.26,2.96-4.12,2.56l.57-1.64c1.01.17,1.76-.42,2.1-1.4.43-1.25-.06-2.34-1.54-2.86-1.49-.52-2.56.04-2.99,1.29-.34.98-.1,1.91.79,2.4l-.57,1.64c-1.71-.83-2.36-2.55-1.66-4.56.79-2.29,2.89-3.15,4.99-2.42,2.1.73,3.21,2.69,2.42,4.98Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m80.07,64.69l6.42,4.12-1.59,2.49c-.98,1.53-2.2,2.64-3.64,1.72-1.06-.68-.79-1.73-.39-2.56l-.36-.23-.6.94c-.32.5-.78.61-1.28.29l-2.05-1.31.94-1.47,2.26,1.45,1.61-2.5-2.26-1.45.94-1.47Zm2.59,3.73l-.65,1.02c-.56.87-.9,1.4-.1,1.92.8.51,1.15-.02,1.7-.89l.66-1.02-1.6-1.03Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m78.45,79.39c-1.73,1.68-3.97,1.49-5.52-.11-1.55-1.6-1.68-3.84.05-5.53,1.74-1.69,3.98-1.49,5.53.11,1.54,1.59,1.67,3.84-.07,5.53Zm-4.4-4.54c-1.03,1-.9,2.17.13,3.22,1.02,1.05,2.18,1.22,3.21.22,1.03-1,.9-2.17-.12-3.22-1.03-1.06-2.19-1.23-3.22-.22Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m68.18,77.73c.5-.32.96-.22,1.27.28l3.59,5.81-1.48.92-3.27-5.28-3.1,2.04-.8-1.3,3.79-2.47Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m62.2,81.01c.55-.22.98-.04,1.19.52l2.42,6.38-1.63.62-2.2-5.81-3.43,1.42-.54-1.43,4.19-1.7Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m46.28,87.94c-.15-3.28,1.96-3.91,3.99-4l2.81-.13.34,7.62-2.81.13c-2.03.09-4.18-.34-4.33-3.61Zm4.06-2.48c-1.35.06-2.42.22-2.32,2.4.1,2.17,1.17,2.23,2.52,2.17l1.07-.05-.21-4.57-1.07.05Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m39.58,90.92c-2.37-.46-3.49-2.41-3.06-4.59.43-2.19,2.2-3.57,4.57-3.11,2.38.46,3.5,2.41,3.07,4.6-.43,2.18-2.2,3.56-4.57,3.1Zm1.21-6.2c-1.41-.28-2.29.5-2.57,1.95-.28,1.43.24,2.48,1.65,2.76s2.29-.5,2.57-1.93c.28-1.45-.24-2.5-1.65-2.77Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m32.88,89.38l-1.49-.79,2.33-6.91-.38-.2-4.22,5.9-3.26-1.74,2.57-6.78-.38-.2-4.46,5.77-1.49-.79,4.75-6.11,3.19,1.7-2.53,6.8.38.2,4.26-5.88,3.18,1.7-2.44,7.34Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m25.05,75.99l-5.42,5.36-2.4-2.43,3.5-6.68-.3-.31-.55,1-4.34,4.29-1.22-1.24,5.42-5.36,2.41,2.44-3.51,6.68.31.32.54-1.01,4.34-4.29,1.22,1.24Z" class="cls-1"></path>
+                                <path data-v-1ffa6883="" d="m15.74,66.36c-.58.31-1.25.16-1.59-.49-.33-.63-.1-1.3.48-1.61.6-.32,1.29-.13,1.62.5.34.65.09,1.29-.51,1.6Z" class="cls-1"></path>
+                            </g>
+                        </svg>
+
+                        <svg data-v-1ffa6883="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">
+                            <path fill="currentColor" d="m20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8z"></path>
+                        </svg>
+                    </div>
+                    <!--Rotating Scroll End-->
+
+                    <!--Mobile Button-->
+                    <div class="mt-4 md:hidden">
+                        <button type="button" class="inline-flex items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></button>
+                    </div>
+                </div>
+                <!--Social Icons-->
+                <ul class="absolute bottom-2 left-1/2 mx-auto flex -translate-x-1/2 flex-row justify-center space-x-4 px-8 md:bottom-auto md:left-auto md:right-0 md:top-2/4 md:-translate-y-1/2 md:translate-x-0 md:flex-col md:space-x-0 md:space-y-4">
+                    <li>
+                        <a href="https://dribbble.com/milanmdhr" class="text-3xl text-white hover:opacity-50" target="_blank"><i class="lab la-dribbble"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/milanmdhr/" class="text-3xl text-white hover:opacity-50" target="_blank"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/uxmilan/" class="text-3xl text-white hover:opacity-50" target="_blank"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:milanmdhr@gmail.com" class="text-3xl text-white hover:opacity-50"><i class="las la-envelope"></i></a>
+                    </li>
+                </ul>
+                <div class="developer absolute md:animate-developer">
+                    <span class="block h-6 w-6 md:h-[1.5vw] md:w-[1.5vw]">
+                        <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
+                            <path d="M4.5641 27L2 3L22 17.2979L11.2308 18.8298L4.5641 27Z" fill="#FC3E6B" stroke="white" stroke-width="2" />
+                        </svg>
+                    </span>
+                    <div class="ml-4 mt-2 bg-[#FC3E6B] px-3 py-1"><span class="text-base font-light text-white md:text-nametag">Developer</span></div>
+                </div>
+                <div class="designer absolute md:animate-designer">
+                    <span class="block h-6 w-6 md:h-[1.5vw] md:w-[1.5vw]">
+                        <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
+                            <path d="M4.5641 27L2 3L22 17.2979L11.2308 18.8298L4.5641 27Z" fill="#1DAAFC" stroke="white" stroke-width="2" />
+                        </svg>
+                    </span>
+                    <div class="ml-4 mt-2 bg-[#1DAAFC] px-3 py-1"><span class="text-base font-light text-white md:text-nametag">Designer</span></div>
+                </div>
+            </div>
+        </main>
+
+        <!--Scrolling Content-->
+        <div class="flex overflow-hidden bg-black py-6 text-white">
+            <div class="shrink-0 animate-marquee">
+                <h2 class="text-2xl lg:text-4xl">Creative Excellence ✦ Digital Design ✦ Personalized Branding ✦ Figma ✦ Unique Design ✦ Teamwork ✦&nbsp;</h2>
+            </div>
+            <div class="shrink-0 animate-marquee">
+                <h2 class="text-2xl lg:text-4xl">Creative Excellence ✦ Digital Design ✦ Personalized Branding ✦ Figma ✦ Unique Design ✦ Teamwork ✦&nbsp;</h2>
+            </div>
+            <div class="shrink-0 animate-marquee">
+                <h2 class="text-2xl lg:text-4xl">Creative Excellence ✦ Digital Design ✦ Personalized Branding ✦ Figma ✦ Unique Design ✦ Teamwork ✦&nbsp;</h2>
+            </div>
+            <div class="shrink-0 animate-marquee">
+                <h2 class="text-2xl lg:text-4xl">Creative Excellence ✦ Digital Design ✦ Personalized Branding ✦ Figma ✦ Unique Design ✦ Teamwork ✦&nbsp;</h2>
+            </div>
+        </div>
+
+        <!--Projects-->
+        <div class="relative bg-dark py-16 lg:py-32">
+            <!-- <div class="absolute left-1/2 top-0 ml-[-45%] h-[25rem] w-[90%] dark:[mask-image:linear-gradient(white,transparent)]">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#36b49f] to-[#DBFF75] opacity-40 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-[#36b49f]/30 dark:to-[#DBFF75]/30 dark:opacity-100"></div>
+        </div> -->
+            <div class="mx-auto max-w-7xl px-4 text-center">
+                <h1 class="mb-4 text-center text-4xl text-white lg:mb-10 lg:text-6xl">Showcase of Selected Projects</h1>
+                <div class="grid grid-cols-1 gap-y-8 text-left lg:mt-16 lg:grid-cols-2 lg:gap-x-12 lg:gap-y-12">
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 hover:bg-cyan-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: Source Taggers</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2020</p>
+                                <h3 class="mb-4 text-3xl">Amooma</h3>
+                            </div>
+                            <img src="assets/images/amooma-web.jpg" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://amooma.hk/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 hover:bg-lime-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: Source Taggers</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2013</p>
+                                <h3 class="mb-4 text-3xl">The Cliff Nepal</h3>
+                            </div>
+                            <img src="assets/images/cliff-showcase.jpg" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.thecliffnepal.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 hover:bg-blue-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: Webbed Studio</p>
+                                <p class="uppercase">Mobile App DESIGN &bull; 2018</p>
+                                <h3 class="mb-4 text-3xl">Insellerate</h3>
+                            </div>
+                            <img src="assets/images/insellerate.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://apps.apple.com/us/app/insellerate/id1517753766" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 hover:bg-orange-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2020</p>
+                                <h3 class="mb-4 text-3xl">Find Yourself In Fashion</h3>
+                            </div>
+                            <img src="assets/images/fyif-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.findyourselfinfashion.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+                    <!-- <div class="portfolio relative rounded-3xl">
+                        <a href="#" class="group relative block h-full w-full overflow-hidden rounded-3xl before:content-[''] hover:before:opacity-100">
+                            <div class="absolute z-10 max-w-80 pl-8 pt-8 text-dark">
+                                <p class="mb-3 rounded-full border border-dark px-4 py-1 text-sm uppercase tracking-widest group-hover:border-white group-hover:text-white">Agency: Source Taggers</p>
+                                <h3 class="mb-1 text-3xl group-hover:text-white">Amooma</h3>
+                                <p class="mb-4 uppercase tracking-widest group-hover:text-white">Website Design · 2021</p>
+                                <span class="flex items-center group-hover:text-white">See Case Study <i class="las la-arrow-right ml-2 text-2xl"></i></span>
+                            </div>
+                            <img src="assets/images/tile-amooma.jpg" alt="" class="project-img rounded-3xl transition-all duration-300 ease-in-out" />
+                        </a>
+
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="portfolio relative rounded-3xl">
+                        <a href="#" class="relative block h-full w-full overflow-hidden rounded-3xl before:content-[''] hover:before:opacity-100">
+                            <div class="absolute z-10 max-w-80 pl-8 pt-8 text-white">
+                                <p class="mb-3 rounded-full border border-white px-4 py-1 text-sm uppercase tracking-widest">Agency: Freelance</p>
+                                <h3 class="mb-1 text-3xl">Amooma 2</h3>
+                                <p class="mb-4 uppercase tracking-widest">Website Design · 2021</p>
+                                <span class="flex items-center group-hover:text-white">See Case Study <i class="las la-arrow-right ml-2 text-2xl"></i></span>
+                            </div>
+                            <img src="assets/images/tile_basicux.jpg" alt="" class="project-img transition-all duration-300 ease-in-out" />
+                        </a>
+
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="portfolio relative rounded-3xl">
+                        <a href="#" class="relative block h-full w-full overflow-hidden rounded-3xl before:content-[''] hover:before:opacity-100">
+                            <div class="absolute z-10 max-w-80 pl-8 pt-8 text-white">
+                                <p class="mb-3 rounded-full border border-white px-4 py-1 text-sm uppercase tracking-widest">Agency: Freelance</p>
+                                <h3 class="mb-1 text-3xl">Amooma 2</h3>
+                                <p class="mb-4 uppercase tracking-widest">Website Design · 2021</p>
+                                <span class="flex items-center group-hover:text-white">See Case Study <i class="las la-arrow-right ml-2 text-2xl"></i></span>
+                            </div>
+                            <img src="assets/images/tile_triniso.jpg" alt="" class="project-img transition-all duration-300 ease-in-out" />
+                        </a>
+
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="portfolio relative rounded-3xl">
+                        <a href="#" class="relative block h-full w-full overflow-hidden rounded-3xl before:content-[''] hover:before:opacity-100">
+                            <div class="absolute z-10 max-w-80 pl-8 pt-8 text-white">
+                                <p class="mb-3 rounded-full border border-white px-4 py-1 text-sm uppercase tracking-widest">Agency: Freelance</p>
+                                <h3 class="mb-1 text-3xl">Amooma 2</h3>
+                                <p class="mb-4 uppercase tracking-widest">Website Design · 2021</p>
+                                <span class="flex items-center group-hover:text-white">See Case Study <i class="las la-arrow-right ml-2 text-2xl"></i></span>
+                            </div>
+                            <img src="assets/images/tile_pmr.jpg" alt="" class="project-img transition-all duration-300 ease-in-out" />
+                        </a>
+
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div> -->
+                </div>
+                <a href="work.html" class="mt-12 inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 uppercase tracking-widest text-dark hover:bg-green-400">See more projects</a>
+            </div>
+        </div>
+
+        <!--Areas of Expertise-->
+        <div class="py-16 lg:py-32" id="services">
+            <div class="mx-auto max-w-7xl px-4 text-center">
+                <h1 class="mb-4 text-center text-4xl lg:text-6xl">Areas of Expertise</h1>
+                <p class="text-lg font-light lg:text-2xl">I worked both with agencies and independently.</p>
+                <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3 lg:mt-16">
+                    <div>
+                        <img src="assets/images/icon-product.svg" alt="" class="mx-auto mb-4" />
+                        <h3 class="mb-3 text-center text-3xl">Product Design</h3>
+                        <ul class="list-inside leading-loose">
+                            <li>Mobile Apps</li>
+                            <li>Dashboards</li>
+                            <li>B2B Software</li>
+                            <li>UI Design</li>
+                            <li>UX Design</li>
+                            <li>Wireframing</li>
+                        </ul>
+                    </div>
+
+                    <!--list-image-[url(../images/list-arrow.svg)]-->
+                    <div>
+                        <img src="assets/images/icon-web.svg" alt="" class="mx-auto mb-4" />
+                        <h3 class="mb-3 text-3xl">Website Design</h3>
+                        <ul class="list-inside leading-loose">
+                            <li>Mobile Apps</li>
+                            <li>Dashboards</li>
+                            <li>B2B Software</li>
+                            <li>UI Design</li>
+                            <li>UX Design</li>
+                            <li>Wireframing</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="assets/images/icon-brand.svg" alt="" class="mx-auto mb-4" />
+                        <h3 class="mb-3 text-3xl">Brand Design</h3>
+                        <ul class="list-inside leading-loose">
+                            <li>Mobile Apps</li>
+                            <li>Dashboards</li>
+                            <li>B2B Software</li>
+                            <li>UI Design</li>
+                            <li>UX Design</li>
+                            <li>Wireframing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Scrolling Content-->
+        <div class="flex overflow-hidden bg-black py-6 text-white">
+            <div class="shrink-0 animate-marquee">
+                <h2 class="flex text-2xl lg:text-4xl">
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-figma.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">Figma</span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-photoshop.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">Photoshop</span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-illustrator.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">Illustrator</span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-indesign.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">InDesign </span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-xd.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">Adobe XD </span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-html.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">HTML 5</span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-css.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">CSS </span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-js.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">JavaScript</span></div>
+                </h2>
+            </div>
+            <div class="shrink-0 animate-marquee">
+                <h2 class="flex text-2xl lg:text-4xl">
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-figma.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">Figma</span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-photoshop.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">Photoshop</span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-illustrator.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">Illustrator</span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-indesign.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">InDesign </span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-xd.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">Adobe XD </span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-html.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">HTML 5</span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-css.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">CSS </span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-js.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">JavaScript</span></div>
+                </h2>
+            </div>
+            <div class="shrink-0 animate-marquee">
+                <h2 class="flex text-2xl lg:text-4xl">
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-figma.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">Figma</span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-photoshop.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">Photoshop</span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-illustrator.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">Illustrator</span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-indesign.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">InDesign </span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-xd.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">Adobe XD </span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-html.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">HTML 5</span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-css.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">CSS </span></div>
+                    <div class="mx-4 flex items-center"><img src="assets/images/icon-js.svg" alt="" class="mr-4 h-8 lg:h-12" /><span class="mt-2">JavaScript</span></div>
+                </h2>
+            </div>
+        </div>
+
+        <!--Testimonials-->
+        <div class="pt-16 lg:pt-32">
+            <div class="">
+                <div class="mx-auto max-w-7xl px-4 text-center">
+                    <h1 class="text-4xl lg:text-6xl">Some nice words from awesome people</h1>
+                </div>
+                <div class="mt-8 lg:mt-16">
+                    <div class="glide">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide">
+                                    <div class="relative flex flex-col rounded-lg border border-gray-300 px-8 py-10">
+                                        <div class="mb-4">
+                                            <img src="assets/images/quotes.svg" alt="" class="mb-4" />
+                                            <p>Fantastic and brilliant service. Highly recommend Milan!</p>
+                                        </div>
+                                        <div class="mt-auto">
+                                            <h3 class="text-2xl lg:text-3xl">Dr. Hasan Asad</h3>
+                                            <p class="text-sm uppercase tracking-widest lg:text-base">The Bearded Toothfairy</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="relative flex flex-col rounded-lg border border-gray-300 px-8 py-10">
+                                        <div class="mb-4">
+                                            <img src="assets/images/quotes.svg" alt="" class="mb-4" />
+                                            <p>Valeri's web design services are exceptional! They transformed my vision into a stunning, user-friendly website.</p>
+                                        </div>
+                                        <div class="mt-auto">
+                                            <h3 class="text-2xl lg:text-3xl">Nikolay Stan</h3>
+                                            <p class="text-sm uppercase tracking-widest lg:text-base">Co-Founder</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="relative flex flex-col rounded-lg border border-gray-300 px-8 py-10">
+                                        <div class="mb-4">
+                                            <img src="assets/images/quotes.svg" alt="" class="mb-4" />
+                                            <p>We are extremely grateful to Valerie for perfect job that he did for us. For attention to detail, dedication and professional advices. Work and communication with him is extremely pleasant and fast. Valerie, thank you and good luck!</p>
+                                        </div>
+                                        <div class="mt-auto">
+                                            <h3 class="text-2xl lg:text-3xl">Maria Banchev</h3>
+                                            <p class="text-sm uppercase tracking-widest lg:text-base">CEO and Co-Founder</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="relative flex flex-col rounded-lg border border-gray-300 px-8 py-10">
+                                        <div class="mb-4">
+                                            <img src="assets/images/quotes.svg" alt="" class="mb-4" />
+                                            <p>We are extremely grateful to Valerie for perfect job that he did for us. For attention to detail, dedication and professional advices. Work and communication with him is extremely pleasant and fast. Valerie, thank you and good luck!</p>
+                                        </div>
+                                        <div class="mt-auto">
+                                            <h3 class="text-2xl lg:text-3xl">Maria Banchev</h3>
+                                            <p class="text-sm uppercase tracking-widest lg:text-base">CEO and Co-Founder</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="relative flex flex-col rounded-lg border border-gray-300 px-8 py-10">
+                                        <div class="mb-4">
+                                            <img src="assets/images/quotes.svg" alt="" class="mb-4" />
+                                            <p>We are extremely grateful to Valerie for perfect job that he did for us. For attention to detail, dedication and professional advices. Work and communication with him is extremely pleasant and fast. Valerie, thank you and good luck!</p>
+                                        </div>
+                                        <div class="mt-auto">
+                                            <h3 class="text-2xl lg:text-3xl">Maria Banchev</h3>
+                                            <p class="text-sm uppercase tracking-widest lg:text-base">CEO and Co-Founder</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="relative flex flex-col rounded-lg border border-gray-300 px-8 py-10">
+                                        <div class="mb-4">
+                                            <img src="assets/images/quotes.svg" alt="" class="mb-4" />
+                                            <p>Valeri has outstanding UX/UI skills and always makes beautiful user-friendly designs. He has a very good eye for detail and can easily transform ideas into reality, regardless of the complexity of user requirements.</p>
+                                        </div>
+                                        <div class="mt-auto">
+                                            <h3 class="text-2xl lg:text-3xl">Galin Taylor</h3>
+                                            <p class="text-sm uppercase tracking-widest lg:text-base">CEO of Zigwave</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Companies-->
+        <div class="bg-primary">
+            <div class="rounded-b-3xl bg-white px-4 py-12 lg:rounded-b-[80px] lg:py-24">
+                <div class="mx-auto text-center">
+                    <p class="mb-8 uppercase tracking-widest">COMPANIES WHO TRUSTED ME WITH THEIR PROJECT</p>
+                    <div class="mx-auto grid grid-cols-3 items-center justify-center opacity-75 lg:grid-cols-6">
+                        <div><img src="assets/images/logo-amooma.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-cliff.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-ins.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-iucn.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-b12.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-pcs.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-cassanga.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-anydone.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-akg.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-treeleaf.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-jimbu.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-hs.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-athina.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-st.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-clickagee.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-webbed.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-mydf.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-tbcs.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer-->
+        <footer class="bg-primary pb-8 pt-16 lg:pt-32">
+            <div class="mx-auto max-w-7xl px-4 text-center">
+                <p class="mb-4 uppercase tracking-widest">Need A Designer?</p>
+                <h1 class="mb-4 text-center text-3xl lg:text-6xl">Let's make something together</h1>
+                <p class="mx-auto max-w-3xl text-lg font-light lg:text-2xl">I help businesses, organizations and individuals from around the world bring their projects to life. I would love to help you too.</p>
+                <a href="contact.html" class="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-100">Start a project <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                <!--Social Icons-->
+                <ul class="mt-10 flex justify-center space-x-4">
+                    <li>
+                        <a href="https://dribbble.com/milanmdhr" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-dribbble"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/milanmdhr/" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/uxmilan/" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:milanmdhr@gmail.com" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark"><i class="las la-envelope"></i></a>
+                    </li>
+                </ul>
+                <p class="mb-2 mt-10 text-sm text-green-900">&copy; 2024 All rights reserved.</p>
+                <p></p>
+                <p class="text-sm text-green-800">Designed & Coded with <i class="las la-heart animate-heart-beat text-red-600 opacity-100"></i> by Milan Manandhar</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <script>
+            new Glide('.glide', {
+                type: 'carousel',
+                perView: 4,
+                autoplay: 3000,
+                gap: 32,
+                startAt: 2,
+                focusAt: 'center',
+                breakpoints: {
+                    1280: {
+                        perView: 3,
+                        gap: 32,
+                        peek: {
+                            before: 60,
+                            after: 60,
+                        },
+                    },
+                    1024: {
+                        perView: 2,
+                        gap: 20,
+                    },
+                    768: {
+                        perView: 1,
+                        gap: 10,
+                        peek: {
+                            before: 30,
+                            after: 30,
+                        },
+                    },
+                },
+            }).mount()
+        </script>
+
+        <script>
+            let scrollpos = window.scrollY
+            const header = document.querySelector('nav')
+            const header_height = header.offsetHeight
+
+            const add_class_on_scroll = () => header.classList.add('fade-in', 'backdrop-blur')
+            const remove_class_on_scroll = () => header.classList.remove('fade-in', 'backdrop-blur')
+
+            window.addEventListener('scroll', function () {
+                scrollpos = window.scrollY
+
+                if (scrollpos >= header_height) {
+                    add_class_on_scroll()
+                } else {
+                    remove_class_on_scroll()
+                }
+            })
+        </script>
+    </body>
+</html>

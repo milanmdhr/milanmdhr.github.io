@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "dev": "postcss scss/style.css -o assets/css/style.css",
+    "watch": "postcss scss/style.css -o assets/css/style.css --watch",
+    "fix:prettier": "prettier --write ./**/*.{html,js}"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.3",
+    "postcss": "^8.4.33",
+    "postcss-cli": "^11.0.0",
+    "prettier": "^3.2.1",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "tailwindcss": "^3.4.1"
+  }
+}
