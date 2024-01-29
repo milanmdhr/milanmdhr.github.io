@@ -13,14 +13,14 @@
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
 
-    <body>
+    <body :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true">
         <!--Navigation-->
         <nav class="fixed z-50 w-full bg-transparent py-6 transition-all duration-300 ease-in-out">
             <div class="mx-auto max-w-7xl px-4">
                 <div class="relative flex items-center justify-between">
                     <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
                         <!-- Mobile menu button-->
-                        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" @click="openMenu = !openMenu" :aria-expanded="openMenu" aria-controls="mobile-navigation" aria-label="Navigation Menu">
                             <span class="absolute -inset-0.5"></span>
                             <span class="sr-only">Open main menu</span>
                             <!--Icon when menu is closed.
@@ -39,7 +39,7 @@
                         <div class="flex flex-shrink-0 items-center">
                             <a href="/"> <img class="h-10 w-auto" src="assets/images/logo.svg" alt="Milan Manandhar" /></a>
                         </div>
-                        <div class="hidden md:ml-6 md:block">
+                        <div class="hidden md:ml-6 md:block" :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true">
                             <div class="flex space-x-4 text-white">
                                 <a href="work" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Work</a>
                                 <a href="about" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">About</a>
@@ -53,6 +53,31 @@
                         </div>
                     </div>
                 </div>
+                <!-- Pop Out Navigation -->
+                <nav id="mobile-navigation" class="fixed bottom-0 left-0 right-0 top-0 z-10 backdrop-blur-sm" :class="openMenu ? 'visible' : 'invisible' " x-cloak>
+                    <!-- UL Links -->
+                    <ul class="absolute bottom-0 right-0 top-0 z-10 w-10/12 bg-white py-4 drop-shadow-2xl transition-all" :class="openMenu ? 'translate-x-0' : 'translate-x-full'">
+                        <li class="border-b border-inherit">
+                            <a href="#" class="block p-4" aria-current="true">Home</a>
+                        </li>
+                        <li class="border-b border-inherit">
+                            <a href="#" class="block p-4">About</a>
+                        </li>
+                        <li class="border-b border-inherit">
+                            <a href="#" class="block p-4">Articles</a>
+                        </li>
+                        <li class="border-b border-inherit">
+                            <a href="#" class="block p-4">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Close Button -->
+                    <button class="absolute bottom-0 left-0 right-0 top-0" @click="openMenu = !openMenu" :aria-expanded="openMenu" aria-controls="mobile-navigation" aria-label="Close Navigation Menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-2 top-2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </nav>
             </div>
         </nav>
 
@@ -527,6 +552,8 @@
                 <p class="text-sm text-green-800">Designed & Coded with <i class="las la-heart animate-heart-beat text-red-600 opacity-100"></i> by Milan Manandhar</p>
             </div>
         </footer>
+
+        <script src="//unpkg.com/alpinejs" defer></script>
 
         <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
         <script>
