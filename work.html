@@ -13,48 +13,55 @@
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
 
-    <body>
+    <body x-data="{ navbarOpen: false, scrolledFromTop:false }" :class="{'overflow-hidden': navbarOpen, 'overflow-auto': !navbarOpen }" class="lg:overflow-auto">
         <!--Navigation-->
-        <nav class="fixed z-50 w-full bg-transparent py-6 transition-all duration-300 ease-in-out">
+        <nav class="fixed z-50 hidden w-full bg-transparent py-6 transition-all duration-300 ease-in-out lg:block">
             <div class="mx-auto max-w-7xl px-4">
-                <div class="relative flex items-center justify-between">
-                    <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
-                        <!-- Mobile menu button-->
-                        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                            <span class="absolute -inset-0.5"></span>
-                            <span class="sr-only">Open main menu</span>
-                            <!--Icon when menu is closed.
-                            Menu open: "hidden", Menu closed: "block" -->
-                            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                            </svg>
-                            <!--Icon when menu is open.
-                            Menu open: "block", Menu closed: "hidden" -->
-                            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
+                <div class="flex items-center justify-between">
+                    <div class="flex flex-shrink-0 items-center">
+                        <a href="/"> <img class="h-10 w-auto" src="assets/images/logo.svg" alt="Milan Manandhar" /></a>
                     </div>
-                    <div class="flex flex-1 items-center justify-between">
-                        <div class="flex flex-shrink-0 items-center">
-                            <a href="/"> <img class="h-10 w-auto" src="assets/images/logo.svg" alt="Milan Manandhar" /></a>
+                    <div class="ml-6">
+                        <div class="flex space-x-4 text-white">
+                            <a href="work" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Work</a>
+                            <a href="about" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">About</a>
+                            <a href="#services" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Services</a>
+                            <a href="https://medium.com/@milanmdhr" target="_blank" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Blog</a>
+                            <a href="contact" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Let's Talk</a>
                         </div>
-                        <div class="hidden md:ml-6 md:block">
-                            <div class="flex space-x-4 text-white">
-                                <a href="work" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Work</a>
-                                <a href="about" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">About</a>
-                                <a href="/#services" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Services</a>
-                                <a href="https://medium.com/@milanmdhr" target="_blank" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Blog</a>
-                                <a href="contact" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Let's Talk</a>
-                            </div>
-                        </div>
-                        <div class="hidden md:block">
-                            <a href="contact" class="inline-flex items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></a>
-                        </div>
+                    </div>
+                    <div>
+                        <a href="contact" class="inline-flex items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></a>
                     </div>
                 </div>
             </div>
         </nav>
+
+        <!-- Mobile Navigation -->
+        <header class="mobnav fixed z-50 block w-full lg:hidden">
+            <div class="flex items-center justify-between p-4">
+                <div>
+                    <a href="/"> <img class="h-10 w-auto" src="assets/images/logo.svg" alt="Milan Manandhar" /></a>
+                </div>
+                <button @click="navbarOpen = !navbarOpen" class="relative h-4 w-6">
+                    <div class="absolute top-1/2 h-0.5 w-full -translate-y-1/2 bg-white transition duration-300 before:absolute before:-top-2 before:left-0 before:h-0.5 before:w-full before:bg-white before:transition-all before:duration-300 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-white after:transition-all after:duration-300" :class="{'rotate-45 before:opacity-0 before:top-0 after:-rotate-90 after:!bottom-0' : navbarOpen}"></div>
+                </button>
+            </div>
+            <div class=" absolute left-0 right-0 top-full z-40 flex h-screen w-full translate-x-full transform flex-col justify-between overflow-y-auto bg-dark pb-[72px]  transition duration-200" :class="{'translate-x-full': !navbarOpen, 'translate-x-0': navbarOpen}">
+                <ul class="px-8 pt-[20%]">
+                    <div class="flex flex-col space-y-4 text-center text-white">
+                        <a href="work" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Work</a>
+                        <a href="about" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">About</a>
+                        <a href="#services" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Services</a>
+                        <a href="https://medium.com/@milanmdhr" target="_blank" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Blog</a>
+                        <a href="contact" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Let's Talk</a>
+                    </div>
+                </ul>
+                <div class="p-8">
+                    <a href="contact" class="flex items-center justify-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                </div>
+            </div>
+        </header>
 
         <!--Main Content-->
         <main>
@@ -806,6 +813,11 @@
             </div>
         </footer>
 
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
         <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
         <script>
             new Glide('.glide', {
@@ -855,6 +867,25 @@
                     add_class_on_scroll()
                 } else {
                     remove_class_on_scroll()
+                }
+            })
+        </script>
+
+        <script>
+            let mobscrollpos = window.scrollY
+            const mobheader = document.querySelector('header')
+            const mobheader_height = mobheader.offsetHeight
+
+            const mob_add_class_on_scroll = () => mobheader.classList.add('bg-dark')
+            const mob_remove_class_on_scroll = () => mobheader.classList.remove('bg-dark')
+
+            window.addEventListener('scroll', function () {
+                mobscrollpos = window.scrollY
+
+                if (mobscrollpos >= mobheader_height) {
+                    mob_add_class_on_scroll()
+                } else {
+                    mob_remove_class_on_scroll()
                 }
             })
         </script>
