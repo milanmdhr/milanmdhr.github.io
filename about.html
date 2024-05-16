@@ -46,7 +46,7 @@
                     <div class="absolute top-1/2 h-0.5 w-full -translate-y-1/2 bg-white transition duration-300 before:absolute before:-top-2 before:left-0 before:h-0.5 before:w-full before:bg-white before:transition-all before:duration-300 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-white after:transition-all after:duration-300" :class="{'rotate-45 before:opacity-0 before:top-0 after:-rotate-90 after:!bottom-0' : navbarOpen}"></div>
                 </button>
             </div>
-            <div class=" absolute left-0 right-0 top-full z-40 flex h-screen w-full translate-x-full transform flex-col justify-between overflow-y-auto bg-dark pb-[72px]  transition duration-200" :class="{'translate-x-full': !navbarOpen, 'translate-x-0': navbarOpen}">
+            <div class="absolute left-0 right-0 top-full z-40 flex h-screen w-full translate-x-full transform flex-col justify-between overflow-y-auto bg-dark pb-[72px] transition duration-200" :class="{'translate-x-full': !navbarOpen, 'translate-x-0': navbarOpen}">
                 <ul class="px-8 pt-[20%]">
                     <div class="flex flex-col space-y-4 text-center text-white">
                         <a href="work" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Work</a>
@@ -78,13 +78,14 @@
         <!--About-->
         <div class="py-16 lg:py-32">
             <div class="mx-auto max-w-7xl px-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-16">
+                <div class="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
                     <div>
                         <h1 class="mb-4 text-4xl lg:text-6xl">Hey there! I am Milan</h1>
                         <p class="mb-4">A seasoned UI/UX Senior Designer, and I've been diving into the world of design for over 15 years. What keeps me going? The thrill of turning your ideas into something incredible. Your vision is my guide, and I work hard to make sure every detail meets your expectations.</p>
 
                         <p class="mb-4">Design, for me, is more than just creating a visually pleasing experience. It's about crafting a space where your dreams come alive. I love the challenge of bringing your thoughts to reality, whether it's a sleek website or a user-friendly mobile app.</p>
-                        <p class="mb-4">My goal is to take the hassle out of design for you. We'll work together to make the process enjoyable and stress-free. Let's collaborate and make your concepts not only look good but work seamlessly too. Ready to turn your ideas into something amazing?</p>
+                        <p>My goal is to take the hassle out of design for you. We'll work together to make the process enjoyable and stress-free. Let's collaborate and make your concepts not only look good but work seamlessly too. Ready to turn your ideas into something amazing?</p>
+                        <a href="assets/pdf/Milan-CV-2024.pdf" class="mt-8 inline-flex items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400" target="_blank">Download my CV <i class="las la-arrow-right ml-2 text-3xl"></i></a>
                     </div>
                     <div>
                         <img src="assets/images/about-photo.jpg" alt="" class="aspect-square rounded-full object-cover object-top" />
