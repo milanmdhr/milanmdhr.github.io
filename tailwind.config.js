@@ -7,6 +7,7 @@ module.exports = {
         primary: '#1ED760',
         primaryhover: '#10D760',
         dark: '#0F0F0F',
+        gray: '#86868b',
       },
       fontSize: {
         'nametag': 'clamp(0.875rem, 1.25vw, 1.25rem)'
