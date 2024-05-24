@@ -10,6 +10,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXPJQHYWHZ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+                dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
+
+            gtag('config', 'G-ZXPJQHYWHZ')
+        </script>
     </head>
 
     <body x-data="{ navbarOpen: false, scrolledFromTop:false }" :class="{'overflow-hidden': navbarOpen, 'overflow-auto': !navbarOpen }" class="lg:overflow-auto">
@@ -46,7 +57,7 @@
                     <div class="absolute top-1/2 h-0.5 w-full -translate-y-1/2 bg-white transition duration-300 before:absolute before:-top-2 before:left-0 before:h-0.5 before:w-full before:bg-white before:transition-all before:duration-300 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-white after:transition-all after:duration-300" :class="{'rotate-45 before:opacity-0 before:top-0 after:-rotate-90 after:!bottom-0' : navbarOpen}"></div>
                 </button>
             </div>
-            <div class=" absolute left-0 right-0 top-full z-40 flex h-screen w-full translate-x-full transform flex-col justify-between overflow-y-auto bg-dark pb-[72px]  transition duration-200" :class="{'translate-x-full': !navbarOpen, 'translate-x-0': navbarOpen}">
+            <div class="absolute left-0 right-0 top-full z-40 flex h-screen w-full translate-x-full transform flex-col justify-between overflow-y-auto bg-dark pb-[72px] transition duration-200" :class="{'translate-x-full': !navbarOpen, 'translate-x-0': navbarOpen}">
                 <ul class="px-8 pt-[20%]">
                     <div class="flex flex-col space-y-4 text-center text-white">
                         <a href="work" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Work</a>
@@ -84,25 +95,25 @@
                             <div class="sm:col-span-3">
                                 <label for="first-name" class="block text-2xl leading-6 tracking-wider text-white">First Name <span class="text-red-500">*</span></label>
                                 <div class="mt-2">
-                                    <input type="text" name="entry.2005620554" id="first-name" autocomplete="given-name" class="block w-full rounded-xl border border-transparent bg-zinc-800 p-4 text-lg text-white shadow-sm placeholder:text-gray-400 focus:border-zinc-600 focus:ring-0 sm:leading-6" required />
+                                    <input type="text" name="entry.2005620554" id="first-name" autocomplete="given-name" class="placeholder:text-gray-400 block w-full rounded-xl border border-transparent bg-zinc-800 p-4 text-lg text-white shadow-sm focus:border-zinc-600 focus:ring-0 sm:leading-6" required />
                                 </div>
                             </div>
                             <div class="sm:col-span-3">
                                 <label for="last-name" class="block text-2xl leading-6 tracking-wider text-white">Last Name</label>
                                 <div class="mt-2">
-                                    <input type="text" name="entry.1034851035" id="last-name" autocomplete="family-name" class="block w-full rounded-xl border border-transparent bg-zinc-800 p-4 text-lg text-white shadow-sm placeholder:text-gray-400 focus:border-zinc-600 focus:ring-0 sm:leading-6" />
+                                    <input type="text" name="entry.1034851035" id="last-name" autocomplete="family-name" class="placeholder:text-gray-400 block w-full rounded-xl border border-transparent bg-zinc-800 p-4 text-lg text-white shadow-sm focus:border-zinc-600 focus:ring-0 sm:leading-6" />
                                 </div>
                             </div>
                             <div class="sm:col-span-3">
                                 <label for="email" class="block text-2xl leading-6 tracking-wider text-white">Email Address <span class="text-red-500">*</span></label>
                                 <div class="mt-2">
-                                    <input id="email" name="entry.1045781291" type="email" autocomplete="email" class="block w-full rounded-xl border border-transparent bg-zinc-800 p-4 text-lg text-white shadow-sm placeholder:text-gray-400 focus:border-zinc-600 focus:ring-0 sm:leading-6" required />
+                                    <input id="email" name="entry.1045781291" type="email" autocomplete="email" class="placeholder:text-gray-400 block w-full rounded-xl border border-transparent bg-zinc-800 p-4 text-lg text-white shadow-sm focus:border-zinc-600 focus:ring-0 sm:leading-6" required />
                                 </div>
                             </div>
                             <div class="sm:col-span-3">
                                 <label for="company" class="block text-2xl leading-6 tracking-wider text-white">Company Name </label>
                                 <div class="mt-2">
-                                    <input type="text" name="entry.1065046570" id="company" autocomplete="family-name" class="block w-full rounded-xl border border-transparent bg-zinc-800 p-4 text-lg text-white shadow-sm placeholder:text-gray-400 focus:border-zinc-600 focus:ring-0 sm:leading-6" />
+                                    <input type="text" name="entry.1065046570" id="company" autocomplete="family-name" class="placeholder:text-gray-400 block w-full rounded-xl border border-transparent bg-zinc-800 p-4 text-lg text-white shadow-sm focus:border-zinc-600 focus:ring-0 sm:leading-6" />
                                 </div>
                             </div>
                             <fieldset class="col-span-full">
@@ -146,7 +157,7 @@
                             </fieldset>
                             <div class="col-span-full">
                                 <label for="details" class="block text-2xl leading-6 tracking-wider text-white">Project Details</label>
-                                <textarea id="details" name="entry.839337160" rows="3" class="mt-2 block w-full rounded-xl border border-transparent bg-zinc-800 p-4 text-lg text-white shadow-sm placeholder:text-gray-400 focus:border-zinc-600 focus:ring-0 sm:leading-6" placeholder="Tell me more about the project"></textarea>
+                                <textarea id="details" name="entry.839337160" rows="3" class="placeholder:text-gray-400 mt-2 block w-full rounded-xl border border-transparent bg-zinc-800 p-4 text-lg text-white shadow-sm focus:border-zinc-600 focus:ring-0 sm:leading-6" placeholder="Tell me more about the project"></textarea>
                             </div>
                             <button type="submit" class="inline-flex items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Submit <i class="las la-arrow-right ml-2 text-3xl"></i></button>
                         </div>
