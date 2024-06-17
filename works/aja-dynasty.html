@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Milan Manandhar - Aja Dynasty</title>
+        <link rel="shortcut icon" href="../assets/images/favicon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" integrity="sha512-tYKqO78H3mRRCHa75fms1gBvGlANz0JxjN6fVrMBvWL+vOOy200npwJ69OBl9XEsTu3yVUvZNrdWFIIrIf8FLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css" integrity="sha512-wCwx+DYp8LDIaTem/rpXubV/C1WiNRsEVqoztV0NZm8tiTvsUeSlA/Uz02VTGSiqfzAHD4RnqVoevMcRZgYEcQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXPJQHYWHZ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+                dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
+
+            gtag('config', 'G-ZXPJQHYWHZ')
+        </script>
+    </head>
+
+    <body x-data="{ navbarOpen: false, scrolledFromTop:false }" :class="{'overflow-hidden': navbarOpen, 'overflow-auto': !navbarOpen }" class="lg:overflow-auto">
+        <!--Navigation-->
+        <nav class="fixed z-50 hidden w-full bg-transparent py-6 transition-all duration-300 ease-in-out lg:block">
+            <div class="mx-auto max-w-7xl px-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex flex-shrink-0 items-center">
+                        <a href="/"> <img class="h-10 w-auto" src="../assets/images/logo.svg" alt="Milan Manandhar" /></a>
+                    </div>
+                    <div class="ml-6">
+                        <div class="flex space-x-4 text-white">
+                            <a href="../work" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Work</a>
+                            <a href="../about" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">About</a>
+                            <a href="../#services" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Services</a>
+                            <a href="https://medium.com/@milanmdhr" target="_blank" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Blog</a>
+                            <a href="../contact" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Let's Talk</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="../contact" class="inline-flex items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <header class="mobnav fixed z-50 block w-full lg:hidden">
+            <div class="flex items-center justify-between p-4">
+                <div>
+                    <a href="/"> <img class="h-10 w-auto" src="../assets/images/logo.svg" alt="Milan Manandhar" /></a>
+                </div>
+                <button @click="navbarOpen = !navbarOpen" class="relative h-4 w-6">
+                    <div class="absolute top-1/2 h-0.5 w-full -translate-y-1/2 bg-white transition duration-300 before:absolute before:-top-2 before:left-0 before:h-0.5 before:w-full before:bg-white before:transition-all before:duration-300 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-white after:transition-all after:duration-300" :class="{'rotate-45 before:opacity-0 before:top-0 after:-rotate-90 after:!bottom-0' : navbarOpen}"></div>
+                </button>
+            </div>
+            <div class="absolute left-0 right-0 top-full z-40 flex h-screen w-full translate-x-full transform flex-col justify-between overflow-y-auto bg-dark pb-[72px] transition duration-200" :class="{'translate-x-full': !navbarOpen, 'translate-x-0': navbarOpen}">
+                <ul class="px-8 pt-[20%]">
+                    <div class="flex flex-col space-y-4 text-center text-white">
+                        <a href="../work" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Work</a>
+                        <a href="../about" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">About</a>
+                        <a href="/#services" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Services</a>
+                        <a href="https://medium.com/@milanmdhr" target="_blank" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Blog</a>
+                        <a href="../contact" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Let's Talk</a>
+                    </div>
+                </ul>
+                <div class="p-8">
+                    <a href="../contact" class="flex items-center justify-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!--Main Content-->
+        <main>
+            <!--Hero-->
+            <div class="home-hero relative rounded-b-3xl bg-black bg-center bg-no-repeat px-4 pt-32 lg:rounded-b-[80px]">
+                <!--Caption-->
+                <div class="caption mx-auto flex h-full max-w-7xl flex-col items-center justify-center pt-20 text-center text-white">
+                    <h1 class="mb-16 text-3xl font-bold md:text-5xl xl:text-8xl">Aja Dynasty</h1>
+                    <img src="../assets/images/aja-web.png" alt="" class="rounded-t-lg" />
+                </div>
+            </div>
+        </main>
+
+        <!--About-->
+        <div class="py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <div class="grid grid-cols-1 justify-between gap-16 md:grid-cols-12">
+                    <div class="md:col-span-6">
+                        <p class="mb-4 uppercase tracking-widest">About the Project</p>
+                        <h1 class="mb-4 text-4xl lg:text-6xl">Project Background</h1>
+                        <p class="mb-4">Aja Dynasty is a fusion of Nepalese culture and contemporary design, celebrating the present moment. The name “Aja” derives from Sanskrit, meaning “today,” symbolizing a focus on living in the present. Aja Dynasty blends Nepalese traditions with modern flair, offering high-quality, authentic Nepalese products. The website redesign aimed to globally showcase Nepal’s richness, present top-notch products, and become a symbol of Nepalese artistry and craftsmanship.</p>
+                        <a href="https://ajadynasty.com/" class="mt-8 inline-flex h-[52px] items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400" target="_blank">View Live Website <i class="las la-arrow-right ml-2 -rotate-45 text-3xl"></i></a>
+                    </div>
+                    <div class="md:col-span-4">
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Agency</p>
+                            <p>Source Taggers</p>
+                        </div>
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Year</p>
+                            <p>2024</p>
+                        </div>
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Roles</p>
+                            <div class="flex flex-wrap gap-2">
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Research & Discovery</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Wireframing</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Prototyping</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">UI/UX Design</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Web Design</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">HTML & CSS Developer</p>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Tools</p>
+                            <div class="flex flex-wrap gap-2">
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Figma</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Zeplin</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Trello</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Adobe CC</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Illustrator</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Photoshop</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Banner 1-->
+        <div class="h-screen bg-[url('../images/aja-banner.png')] bg-cover bg-fixed bg-center bg-no-repeat"></div>
+
+        <!--How it started-->
+        <div class="py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">01. Start</p>
+                <h1 class="mb-8 text-4xl lg:text-6xl">How it started.</h1>
+                <div class="grid grid-cols-1 justify-between gap-16 md:grid-cols-2">
+                    <div class="md:col-span-1">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">The Problem</h3>
+                        <ul class="list-disc space-y-2 pl-5">
+                            <li><strong>Design:</strong> The old website had an outdated look that didn’t reflect the brand's prestige and cultural heritage.</li>
+                            <li><strong>Poor User Experience:</strong> Navigation was confusing, and important information was hard to find.</li>
+                            <li><strong>Lack of Mobile Responsiveness:</strong> The website wasn't optimized for mobile devices, leading to a poor experience for mobile users.</li>
+                            <li><strong>Ineffective Content Presentation:</strong> The content was not engaging or well-organized, failing to capture user interest.</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-1">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">The Solution</h3>
+                        <ul class="list-disc space-y-2 pl-5">
+                            <li><strong>Modern Design:</strong> Implement a clean, modern design that aligns with the brand’s cultural and culinary excellence.</li>
+                            <li><strong>Enhanced Navigation:</strong> Improve the site structure to make it more intuitive.</li>
+                            <li><strong>Mobile Optimization:</strong> Ensure the website is fully responsive to provide a seamless experience on all devices.</li>
+                            <li><strong>Engaging Content:</strong> Design with a focus on storytelling and visual appeal to better engage users.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Research-->
+        <div class="bg-dark py-16 text-white lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">02. Research</p>
+                <h1 class="mb-4 text-4xl lg:text-6xl">Research & Discovery</h1>
+                <p class="mb-12 text-gray">The research and discovery phase for Aja Dynasty's website redesign involved understanding the brand, market, and user needs. We started with consultations to understand the client's vision, followed by analyzing top competitors to find opportunities for differentiation. Identifying the target audience—cultural enthusiasts, luxury shoppers, and design aficionados—was key. Surveys, interviews, and user testing provided insights into user preferences and pain points, revealing issues like confusing navigation and lack of mobile optimization. We found a strong user interest in the cultural stories behind the products. These findings helped define clear goals for a user-centric redesign that blends Nepalese tradition with modern design to engage users effectively.</p>
+
+                <div class="mb-10 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Understanding the Client and Market</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-gray">Understanding the client and market is crucial for designing the Aja Dynasty website. By exploring the brand's goals and values, I gained insights into its mission of merging Nepalese tradition with modern design. I also identified cultural enthusiasts, luxury shoppers, and design lovers as the target audience. This understanding helped me create a website that resonates with these groups, providing a tailored and engaging experience.</p>
+                    </div>
+                </div>
+
+                <div class="mb-10 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Analyzing the Competition</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-gray">To position Aja Dynasty effectively, we analyzed top competitors in the cultural and designer brand space. This analysis included studying their website designs, user experience, product presentation, and marketing strategies. The goal was to identify industry standards, understand what competitors were doing well, and pinpoint areas where Aja Dynasty could differentiate itself. Key aspects like visual design, navigation, content strategy, and mobile responsiveness were closely examined.</p>
+                    </div>
+                </div>
+
+                <div class="mb-10 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Identifying Target Audience</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-gray">The target audience for Aja Dynasty includes cultural enthusiasts, luxury shoppers, and design aficionados. Cultural enthusiasts are individuals passionate about exploring and preserving cultural heritage. Luxury shoppers seek high-quality, unique products that stand out. Design aficionados are interested in modern design and aesthetic appeal combined with traditional elements.</p>
+                    </div>
+                </div>
+
+                <div class="mb-12 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Gathering User Insights</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-gray">User insights were gathered through a combination of surveys, interviews, and user testing. Surveys helped in understanding user demographics, preferences, and behaviors. Interviews provided deeper insights into user motivations and pain points. User testing allowed us to observe real-time interactions with the current website, identifying usability issues and areas for improvement. These methods collectively provided a comprehensive understanding of user expectations and challenges.</p>
+                    </div>
+                </div>
+                <h3 class="mb-8 text-2xl lg:text-3xl">Key Findings</h3>
+                <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div class="rounded-xl bg-zinc-800 p-5 md:p-8">
+                        <img src="../assets/images/icon-crown-golden.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">User Interest in Cultural Heritage</h3>
+                        <p class="text-gray">Users showed a strong interest in the cultural stories behind Aja Dynasty's products, indicating a desire for authenticity and connection with Nepalese heritage.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-zinc-800 p-5 md:p-8">
+                        <img src="../assets/images/icon-nav-golden.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Navigation Issues</h3>
+                        <p class="text-gray">The existing website had navigation problems, with users finding it confusing and difficult to navigate. This highlighted the need for improved site structure and intuitive navigation.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-zinc-800 p-5 md:p-8">
+                        <img src="../assets/images/icon-mob-golden.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Mobile Optimization Lacking</h3>
+                        <p class="text-gray">The current website lacked mobile optimization, leading to a poor user experience for mobile users. This underscored the importance of ensuring a seamless experience across all devices.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-zinc-800 p-5 md:p-8">
+                        <img src="../assets/images/icon-content-golden.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Desire for Engaging Content</h3>
+                        <p class="text-gray">Users expressed a desire for engaging content that goes beyond product listings, indicating an opportunity to incorporate storytelling and immersive experiences into the website design.</p>
+                    </div>
+                </div>
+
+                <h3 class="mb-8 text-2xl lg:text-3xl">Personas</h3>
+                <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div class="rounded-xl bg-zinc-800 p-5 md:p-8">
+                        <div class="mb-4 flex items-center space-x-4">
+                            <img src="../assets/images/pp-emma.png" alt="" class="mb-4 w-20 rounded-full md:w-28" />
+                            <div>
+                                <h3 class="mb-1 text-2xl lg:mb-2 lg:text-3xl">Emma, 28</h3>
+                                <p class="text-gray">Cultural Travel Blogger</p>
+                            </div>
+                        </div>
+
+                        <p class="mb-3 text-gray"><span class="font-medium uppercase tracking-wider text-primary">GOALS:</span> Emma loves sharing cultural discoveries from her travels. She's on the lookout for unique products with rich stories to enhance her blog.</p>
+                        <p class="mb-3 text-gray"><span class="font-medium uppercase tracking-wider text-primary">FRUSTRATIONS:</span> Emma finds it hard to find genuine, culturally meaningful items during her trips. She's tired of sifting through generic souvenirs.</p>
+                        <p class="text-gray"><span class="font-medium uppercase tracking-wider text-primary">NEEDS:</span> Emma needs a platform with a curated selection of authentic cultural products, making her blogging journey smoother.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-zinc-800 p-5 md:p-8">
+                        <div class="mb-4 flex items-center space-x-4">
+                            <img src="../assets/images/pp-john.png" alt="" class="mb-4 w-20 rounded-full md:w-28" />
+                            <div>
+                                <h3 class="mb-1 text-2xl lg:mb-2 lg:text-3xl">John, 35</h3>
+                                <p class="text-gray">Business Professional</p>
+                            </div>
+                        </div>
+
+                        <p class="mb-3 text-gray"><span class="font-medium uppercase tracking-wider text-primary">GOALS:</span> John seeks unique, culturally inspired products to elevate his professional image and enhance client experiences.</p>
+                        <p class="mb-3 text-gray"><span class="font-medium uppercase tracking-wider text-primary">FRUSTRATIONS:</span> John is tired of generic corporate gifts and wants authentic, culturally significant items to impress clients.</p>
+                        <p class="text-gray"><span class="font-medium uppercase tracking-wider text-primary">NEEDS:</span> John needs a platform offering curated, culturally rich products that align with his brand and make a lasting impression on clients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-16 lg:pt-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">03. Design Process</p>
+                <h1 class="mb-4 text-4xl lg:text-6xl">Wireframes</h1>
+                <p class="mb-12 text-gray">I designed straightforward wireframes for the Aja Dynasty site, focusing on user needs and business goals. These blueprints provide a clear roadmap for the website's design, ensuring a seamless user experience aligned with the brand's vision.</p>
+            </div>
+        </div>
+
+        <!-- <img src="../assets/images/hydro-wireframe.png" alt="" class="w-full" /> -->
+
+        <!-- <div class="mx-auto max-w-7xl px-4"><hr /></div> -->
+        <div class="py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <h1 class="mb-4 text-4xl lg:text-6xl">Global Design System</h1>
+                <p class="mb-12 text-gray">The Global Design System for the Aja Dynasty website revolves around a refined palette of golden and black, echoing the brand's elegance. Typography is carefully chosen to enhance readability and convey sophistication, while drawing inspiration from traditional Nepalese art. This harmonious blend of typography, color palette, and components ensures a cohesive and memorable user experience, reflecting Aja Dynasty's cultural roots and brand identity.</p>
+                <div class="grid grid-cols-1 justify-between gap-16 md:grid-cols-12">
+                    <div class="md:col-span-8">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Typography</h3>
+                        <img src="../assets/images/aja-typography.svg" alt="" class="w-full" />
+                    </div>
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Color palette</h3>
+                        <div class="mb-4 rounded bg-[#BD9456] p-5 text-xl tracking-widest text-white">#BD9456</div>
+                        <div class="mb-4 rounded bg-[#9D7943] p-5 text-xl tracking-widest text-white">#9D7943</div>
+                        <div class="mb-4 rounded bg-[#1E1E19] p-5 text-xl tracking-widest text-white">#1E1E19</div>
+                        <div class="mb-4 rounded bg-[#000000] p-5 text-xl tracking-widest text-white">#000000</div>
+                        <div class="mb-4 rounded border bg-[#E5E3D6] p-5 text-xl tracking-widest text-dark">#E5E3D6</div>
+                        <div class="mb-4 rounded border bg-[#FFFFFF] p-5 text-xl tracking-widest text-dark">#FFFFFF</div>
+                    </div>
+                    <div class="md:col-span-12">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Components</h3>
+                        <img src="../assets/images/aja-components.svg" alt="" class="w-full" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#E5E3D6] py-16 lg:py-32">
+            <div class="mx-auto max-w-5xl px-4 text-center">
+                <h1 class="mb-4 text-4xl lg:text-6xl">Visual Design</h1>
+                <p class="mb-12 text-gray">In crafting the visual design for the Aja Dynasty website, I aimed to blend traditional Nepalese style with modern design. I chose rich colors like deep golds and blacks to evoke a sense of luxury and heritage. For clarity and sophistication, I used modern, easy-to-read typography. High-quality images and simple layouts showcase the authenticity of Aja Dynasty's products, while intuitive navigation guides users smoothly through the site. This mix of visual elements reflects the brand's identity and invites users to explore its cultural stories.</p>
+            </div>
+            <div class="mb-16 px-[10%] text-center">
+                <img src="../assets/images/aja-responsive.png" class="w-full" alt="" />
+                <a href="https://ajadynasty.com/" class="mt-8 inline-flex h-[52px] items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400" target="_blank">View Live Website <i class="las la-arrow-right ml-2 -rotate-45 text-3xl"></i></a>
+            </div>
+            <!--Screenshots-->
+
+            <div class="mt-8 lg:mt-16">
+                <div class="glide screenshots-slider">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <img src="../assets/images/aja-01.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/aja-02.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/aja-03.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/aja-05.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/aja-06.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/aja-07.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/aja-08.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/aja-09.png" alt="" />
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img src="../assets/images/arrow-prev.svg" alt="" /></button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="../assets/images/arrow-prev.svg" alt="" class="arrow-next" /></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Conslusion-->
+        <div class="bg-dark py-16 text-white lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">04. Conclusion</p>
+                <h1 class="mb-4 text-4xl lg:text-6xl">Key Learnings</h1>
+                <p class="mb-12 text-gray">My journey through this project provided some valuable insights.</p>
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div class="rounded-xl bg-zinc-800 p-5 md:p-8">
+                        <img src="../assets/images/icon-user-golden.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">User-Centric Design</h3>
+                        <p class="text-gray">Understanding user needs and preferences is crucial for creating an engaging and effective website.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-zinc-800 p-5 md:p-8">
+                        <img src="../assets/images/icon-balance-golden.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Balancing Tradition and Modernity</h3>
+                        <p class="text-gray">Successfully blending traditional elements with modern design can create a unique and appealing brand identity.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-zinc-800 p-5 md:p-8">
+                        <img src="../assets/images/icon-chat-golden.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Effective Storytelling</h3>
+                        <p class="text-gray">Engaging content that tells a story can significantly enhance user engagement and brand loyalty.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-zinc-800 p-5 md:p-8">
+                        <img src="../assets/images/icon-mob-golden.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Importance of Mobile Optimization</h3>
+                        <p class="text-gray">Ensuring a seamless mobile experience is essential in today’s digital landscape.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Banner 2-->
+        <!-- <div class="h-screen bg-[url('../images/amooma-banner2.png')] bg-cover bg-fixed bg-center bg-no-repeat"></div> -->
+
+        <!--Suggestions-->
+        <div class="bg-primary">
+            <div class="rounded-b-3xl bg-white py-16 lg:rounded-b-[80px] lg:py-32">
+                <div class="mx-auto max-w-7xl px-4">
+                    <h1 class="mb-8 text-center text-4xl md:text-left lg:text-6xl">More to explore</h1>
+                    <div class="grid grid-cols-1 justify-between gap-y-8 md:grid-cols-2">
+                        <div class="flex items-center gap-x-5 lg:gap-x-8">
+                            <a href="amooma"><img src="../assets/images/amooma-web.jpg" alt="" class="h-32 rounded-md duration-300 ease-in-out hover:scale-110" /></a>
+                            <div>
+                                <a href="amooma" class="mb-2 inline-flex items-center rounded-full uppercase tracking-widest text-dark hover:text-primary"><i class="las la-arrow-right mr-2 rotate-[135deg] text-xl md:text-3xl"></i> Previous </a>
+                                <a href="amooma" class="hover:text-primary"><h3 class="mb-1 text-2xl md:text-3xl">Amooma</h3></a>
+                                <a href="amooma" class="uppercase hover:text-primary"><p>UI/UX/WEB DESIGN • 2020</p></a>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="flex items-center justify-end gap-x-5 lg:gap-x-8">
+                                <div>
+                                    <a href="#" class="mb-2 inline-flex items-center rounded-full uppercase tracking-widest text-dark hover:text-primary">Next Up <i class="las la-arrow-right ml-2 -rotate-45 text-xl md:text-3xl"></i></a>
+                                    <a href="#" class="hover:text-primary"><h3 class="mb-1 text-2xl md:text-3xl">Insellerate</h3></a>
+                                    <a href="#" class="uppercase hover:text-primary"><p>Mobile App Design • 2018</p></a>
+                                </div>
+                                <a href="#"><img src="../assets/images/insellerate.png" alt="" class="h-32 rounded-md bg-blue-100 duration-300 ease-in-out hover:scale-110" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer-->
+        <footer class="bg-primary px-4 pb-8 pt-16 lg:pt-32">
+            <div class="mx-auto max-w-7xl text-center">
+                <p class="mb-4 uppercase tracking-widest">Need A Designer?</p>
+                <h1 class="mb-4 text-center text-3xl lg:text-6xl">Let's make something together</h1>
+                <p class="mx-auto max-w-3xl text-lg font-light lg:text-2xl">I help businesses, organizations and individuals from around the world bring their projects to life. I would love to help you too.</p>
+                <a href="../contact" class="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-100">Start a project <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                <!--Social Icons-->
+                <ul class="mt-10 flex justify-center space-x-4">
+                    <li>
+                        <a href="https://dribbble.com/milanmdhr" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-dribbble"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/milanmdhr/" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/uxmilan/" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:milanmdhr@gmail.com" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark"><i class="las la-envelope"></i></a>
+                    </li>
+                </ul>
+                <p class="mb-2 mt-10 text-sm text-green-900">&copy; 2024 All rights reserved.</p>
+                <p></p>
+                <p class="text-sm text-green-800">Designed & Coded with <i class="las la-heart animate-heart-beat text-red-600 opacity-100"></i> by Milan Manandhar</p>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <script>
+            new Glide('.glide', {
+                type: 'carousel',
+                perView: 4,
+                autoplay: 3000,
+                gap: 32,
+                startAt: 2,
+                focusAt: 'center',
+                breakpoints: {
+                    1280: {
+                        perView: 3,
+                        gap: 32,
+                        peek: {
+                            before: 60,
+                            after: 60,
+                        },
+                    },
+                    1024: {
+                        perView: 2,
+                        gap: 20,
+                    },
+                    768: {
+                        perView: 1,
+                        gap: 10,
+                        peek: {
+                            before: 30,
+                            after: 30,
+                        },
+                    },
+                },
+            }).mount()
+        </script>
+
+        <script>
+            let scrollpos = window.scrollY
+            const header = document.querySelector('nav')
+            const header_height = header.offsetHeight
+
+            const add_class_on_scroll = () => header.classList.add('fade-in', 'backdrop-blur')
+            const remove_class_on_scroll = () => header.classList.remove('fade-in', 'backdrop-blur')
+
+            window.addEventListener('scroll', function () {
+                scrollpos = window.scrollY
+
+                if (scrollpos >= header_height) {
+                    add_class_on_scroll()
+                } else {
+                    remove_class_on_scroll()
+                }
+            })
+        </script>
+
+        <script>
+            let mobscrollpos = window.scrollY
+            const mobheader = document.querySelector('header')
+            const mobheader_height = mobheader.offsetHeight
+
+            const mob_add_class_on_scroll = () => mobheader.classList.add('bg-dark')
+            const mob_remove_class_on_scroll = () => mobheader.classList.remove('bg-dark')
+
+            window.addEventListener('scroll', function () {
+                mobscrollpos = window.scrollY
+
+                if (mobscrollpos >= mobheader_height) {
+                    mob_add_class_on_scroll()
+                } else {
+                    mob_remove_class_on_scroll()
+                }
+            })
+        </script>
+    </body>
+</html>
