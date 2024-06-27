@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Milan Manandhar - Works</title>
+        <link rel="shortcut icon" href="assets/images/favicon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" integrity="sha512-tYKqO78H3mRRCHa75fms1gBvGlANz0JxjN6fVrMBvWL+vOOy200npwJ69OBl9XEsTu3yVUvZNrdWFIIrIf8FLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXPJQHYWHZ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+                dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
+
+            gtag('config', 'G-ZXPJQHYWHZ')
+        </script>
+    </head>
+
+    <body x-data="{ navbarOpen: false, scrolledFromTop:false }" :class="{'overflow-hidden': navbarOpen, 'overflow-auto': !navbarOpen }" class="lg:overflow-auto">
+        <!--Navigation-->
+        <nav class="fixed z-50 hidden w-full bg-transparent py-6 transition-all duration-300 ease-in-out lg:block">
+            <div class="mx-auto max-w-7xl px-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex flex-shrink-0 items-center">
+                        <a href="/"> <img class="h-10 w-auto" src="assets/images/logo.svg" alt="Milan Manandhar" /></a>
+                    </div>
+                    <div class="ml-6">
+                        <div class="flex space-x-4 text-white">
+                            <a href="work" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Work</a>
+                            <a href="about" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">About</a>
+                            <a href="/#services" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Services</a>
+                            <a href="https://medium.com/@milanmdhr" target="_blank" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Blog</a>
+                            <a href="contact" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Let's Talk</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="contact" class="inline-flex items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <header class="mobnav fixed z-50 block w-full lg:hidden">
+            <div class="flex items-center justify-between p-4">
+                <div>
+                    <a href="/"> <img class="h-10 w-auto" src="assets/images/logo.svg" alt="Milan Manandhar" /></a>
+                </div>
+                <button @click="navbarOpen = !navbarOpen" class="relative h-4 w-6">
+                    <div class="absolute top-1/2 h-0.5 w-full -translate-y-1/2 bg-white transition duration-300 before:absolute before:-top-2 before:left-0 before:h-0.5 before:w-full before:bg-white before:transition-all before:duration-300 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-white after:transition-all after:duration-300" :class="{'rotate-45 before:opacity-0 before:top-0 after:-rotate-90 after:!bottom-0' : navbarOpen}"></div>
+                </button>
+            </div>
+            <div class="absolute left-0 right-0 top-full z-40 flex h-screen w-full translate-x-full transform flex-col justify-between overflow-y-auto bg-dark pb-[72px] transition duration-200" :class="{'translate-x-full': !navbarOpen, 'translate-x-0': navbarOpen}">
+                <ul class="px-8 pt-[20%]">
+                    <div class="flex flex-col space-y-4 text-center text-white">
+                        <a href="work" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Work</a>
+                        <a href="about" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">About</a>
+                        <a href="/#services" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Services</a>
+                        <a href="https://medium.com/@milanmdhr" target="_blank" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Blog</a>
+                        <a href="contact" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Let's Talk</a>
+                    </div>
+                </ul>
+                <div class="p-8">
+                    <a href="contact" class="flex items-center justify-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!--Main Content-->
+        <main>
+            <!--Hero-->
+            <div class="home-hero relative h-[60vh] bg-dark bg-[url('../images/hero-background-01.svg')] bg-center bg-no-repeat px-4">
+                <!--Caption-->
+                <div class="caption mx-auto flex h-full max-w-7xl flex-col items-center justify-center py-20 text-center text-white">
+                    <h1 class="text-3xl font-bold md:text-5xl xl:text-8xl">15 years of design work</h1>
+
+                    <p class="mt-4 text-lg font-light lg:text-2xl">A collection of some of my favorite Design projects from the past few years.</p>
+                </div>
+            </div>
+        </main>
+
+        <!--Projects-->
+        <div class="relative bg-dark pb-16 pt-12 lg:pb-32">
+            <div class="mx-auto max-w-7xl px-4 text-center">
+                <div class="grid grid-cols-1 gap-y-8 text-left lg:mt-16 lg:grid-cols-2 lg:gap-x-12 lg:gap-y-12">
+                    <!--Aja Dynasty-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-[#E5E3D6]">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: Source Taggers</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2024</p>
+                                <h3 class="mb-4 text-3xl">Aja Dynasty</h3>
+                            </div>
+                            <img src="assets/images/aja-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="works/aja-dynasty" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Insellerate-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-blue-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: Webbed Studio</p>
+                                <p class="uppercase">Mobile App DESIGN &bull; 2018</p>
+                                <h3 class="mb-4 text-3xl">Insellerate</h3>
+                            </div>
+                            <img src="assets/images/insellerate.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="works/insellerate" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--The Cliff Nepal-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-lime-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: Source Taggers</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">The Cliff Nepal</h3>
+                            </div>
+                            <img src="assets/images/cliff-showcase.jpg" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="works/the-cliff-nepal" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Amooma-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-cyan-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: Source Taggers</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2020</p>
+                                <h3 class="mb-4 text-3xl">Amooma</h3>
+                            </div>
+                            <img src="assets/images/amooma-web.jpg" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="works/amooma" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Hydro Steam Northwest-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-[#DCF0FA]">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: Clickagee</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2019</p>
+                                <h3 class="mb-4 text-3xl">Hydro Steam Northwest</h3>
+                            </div>
+                            <img src="assets/images/hydrosteam-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="works/hydro-steam-nw" target="" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Source Taggers-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-300 ease-in-out hover:bg-sky-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: Source Taggers</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2018</p>
+                                <h3 class="mb-4 text-3xl">Source Taggers</h3>
+                            </div>
+                            <img src="assets/images/sourcetaggers-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://sourcetaggers.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Find Yourself In Fashion-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-orange-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2020</p>
+                                <h3 class="mb-4 text-3xl">Find Yourself In Fashion</h3>
+                            </div>
+                            <img src="assets/images/fyif-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.findyourselfinfashion.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Sinder-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-slate-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: Clickagee</p>
+                                <p class="uppercase">Website Design</p>
+                                <h3 class="mb-4 text-3xl">Sinder</h3>
+                            </div>
+                            <img src="assets/images/sinder-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="http://wearsinder.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--The Rainbow Disruption-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-purple-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2022</p>
+                                <h3 class="mb-4 text-3xl">The Rainbow Disruption</h3>
+                            </div>
+                            <img src="assets/images/rainbow-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.rainbowdisruption.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--The Division I Collective-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-blue-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2022</p>
+                                <h3 class="mb-4 text-3xl">The Division I Collective</h3>
+                            </div>
+                            <img src="assets/images/division-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.thed1collective.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Andrea Taylor Inc.-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-orange-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2022</p>
+                                <h3 class="mb-4 text-3xl">Andrea Taylor Inc.</h3>
+                            </div>
+                            <img src="assets/images/andrea-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.andreataylorinc.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--A+ Daycare-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-300 ease-in-out hover:bg-fuchsia-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2022</p>
+                                <h3 class="mb-4 text-3xl">A+ Daycare</h3>
+                            </div>
+                            <img src="assets/images/daycare-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.aplusdaycare.co/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Professional Consulting Service-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-300 ease-in-out hover:bg-indigo-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: Source Taggers</p>
+                                <p class="uppercase">Branding/WEB DESIGN &bull; 2022</p>
+                                <h3 class="mb-4 text-3xl">Professional Consulting Service</h3>
+                            </div>
+                            <img src="assets/images/pcs-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.nepalpcs.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Star Cypress Partners-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-teal-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2024</p>
+                                <h3 class="mb-4 text-3xl">Star Cypress Partners</h3>
+                            </div>
+                            <img src="assets/images/starcypress-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.starcypresspartners.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Central Data Storage-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-violet-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2024</p>
+                                <h3 class="mb-4 text-3xl">Central Data Storage</h3>
+                            </div>
+                            <img src="assets/images/cds-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.centraldatastorage.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--SML Fulfillment-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-rose-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2024</p>
+                                <h3 class="mb-4 text-3xl">SML Fulfillment</h3>
+                            </div>
+                            <img src="assets/images/sml-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.smlfulfillment.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Weathermark Advisors-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-blue-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2024</p>
+                                <h3 class="mb-4 text-3xl">Weathermark Advisors</h3>
+                            </div>
+                            <img src="assets/images/weathermark-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.weathermarkadvisors.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Soul Good Travel-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-violet-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">Soul Good Travel</h3>
+                            </div>
+                            <img src="assets/images/soul-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.soul-good-travel.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Birdsong Sober Living-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-cyan-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">Birdsong Sober Living</h3>
+                            </div>
+                            <img src="assets/images/birdsong-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.birdsongsoberliving.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Mobile Logistics-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-red-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">Mobile Logistics</h3>
+                            </div>
+                            <img src="assets/images/mobilelogistics-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.mobilelogistics.org/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--FurrBaby Sitting-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-emerald-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">FurrBaby Sitting</h3>
+                            </div>
+                            <img src="assets/images/furrbaby-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.furrbabysitting.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--The Nexus Station-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-pink-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">The Nexus Station</h3>
+                            </div>
+                            <img src="assets/images/nexus-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.thenexusstation.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--New Leaf Concierge Wellness and Homecare-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-lime-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">New Leaf Concierge</h3>
+                            </div>
+                            <img src="assets/images/newleaf-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.newleafconciergeny.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--American Real Estate Associates-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-red-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">American Real Estate Associates</h3>
+                            </div>
+                            <img src="assets/images/area-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.areanw.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Prescott-Clearwater-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-orange-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">Prescott-Clearwater</h3>
+                            </div>
+                            <img src="assets/images/prescott-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.prescott-clearwater.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--MYRA Studio-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-amber-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">MYRA Studio</h3>
+                            </div>
+                            <img src="assets/images/myra-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.myrastudio.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Rowan Walsh-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-sky-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">Rowan Walsh</h3>
+                            </div>
+                            <img src="assets/images/rowan-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.roellesh.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Odyssey Polymers-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-orange-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">Odyssey Polymers</h3>
+                            </div>
+                            <img src="assets/images/odyssey-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.odysseypolymers.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Breakthrough Manufacturing Technologies-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-red-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">Breakthrough Manufacturing Technologies</h3>
+                            </div>
+                            <img src="assets/images/breakthrough-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.breakthroughmanufactoringtech.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Compass-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-indigo-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">Compass</h3>
+                            </div>
+                            <img src="assets/images/compass-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.compassaid.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Enhancewell Consulting-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-teal-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">Enhancewell Consulting</h3>
+                            </div>
+                            <img src="assets/images/enhancewell-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://enhancewell.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Unique Styles Barber Shop-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-red-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2023</p>
+                                <h3 class="mb-4 text-3xl">Unique Styles Barber Shop</h3>
+                            </div>
+                            <img src="assets/images/uniquebarber-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.uniquestylesbarber.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--M&J Just Be Kind Pet Services-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-amber-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2022</p>
+                                <h3 class="mb-4 text-3xl">M&J Just Be Kind Pet Services</h3>
+                            </div>
+                            <img src="assets/images/mjpet-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.mandjjustbekindpetservices.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Pause-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-sky-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2022</p>
+                                <h3 class="mb-4 text-3xl">Pause</h3>
+                            </div>
+                            <img src="assets/images/pause-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.pause.biz/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Little Acorn-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-sky-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2022</p>
+                                <h3 class="mb-4 text-3xl">Little Acorn</h3>
+                            </div>
+                            <img src="assets/images/littleacorn-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.littleacornpreschoolma.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Radiant Health And Wellness-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-lime-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2022</p>
+                                <h3 class="mb-4 text-3xl">Radiant Health And Wellness</h3>
+                            </div>
+                            <img src="assets/images/radianthealth-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.radianthealthandwellness.co/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--My Color Magic Painting-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-teal-50">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2022</p>
+                                <h3 class="mb-4 text-3xl">My Color Magic Painting</h3>
+                            </div>
+                            <img src="assets/images/mycolor-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.mycolormagicpainting.com/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--The Rockoff Team-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-sky-100">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: B12</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2022</p>
+                                <h3 class="mb-4 text-3xl">The Rockoff Team</h3>
+                            </div>
+                            <img src="assets/images/planateck-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://www.rlender.net/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <!--Tax & Business Consulting Services-->
+                    <div class="portfolio group relative rounded-3xl bg-zinc-800 pl-8 pt-6 transition duration-500 ease-in-out hover:bg-blue-200">
+                        <div class="overflow-hidden rounded-br-3xl">
+                            <div class="pr-4 text-right text-white group-hover:text-dark lg:pr-8">
+                                <p class="mb-3 inline-block w-auto rounded-full border border-white px-4 py-1 text-xs uppercase tracking-widest group-hover:border-dark">Agency: Source Taggers</p>
+                                <p class="uppercase">UI/UX/WEB DESIGN &bull; 2014</p>
+                                <h3 class="mb-4 text-3xl">Tax & Business Consulting Services</h3>
+                            </div>
+                            <img src="assets/images/tbcs-web.png" alt="" class="translate-x-3 transform rounded-br-3xl rounded-tl-lg duration-300 ease-in-out group-hover:translate-x-0" />
+                        </div>
+                        <a href="https://tbcs.com.np/" target="_blank" class="absolute inset-0 z-10"><div class="sr-only">open case study</div></a>
+                        <div class="view-project absolute -right-8 bottom-12 z-20 animate-spin-slow mix-blend-difference transition-all duration-300 ease-in-out">
+                            <img src="assets/images/view-project-white.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Testimonials-->
+        <div class="pt-16 lg:pt-32">
+            <div class="">
+                <div class="mx-auto max-w-7xl px-4 text-center">
+                    <h1 class="text-4xl lg:text-6xl">Some nice words from awesome people</h1>
+                </div>
+                <div class="mt-8 lg:mt-16">
+                    <div class="glide">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide">
+                                    <div class="border-gray-300 relative flex flex-col rounded-lg border px-8 py-10">
+                                        <div class="mb-4">
+                                            <img src="assets/images/quotes.svg" alt="" class="mb-4" />
+                                            <p>Fantastic and brilliant service. Highly recommend Milan!</p>
+                                        </div>
+                                        <div class="mt-auto">
+                                            <h3 class="text-2xl lg:text-3xl">Dr. Hasan Asad</h3>
+                                            <p class="text-sm uppercase tracking-widest lg:text-base">The Bearded Toothfairy</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="border-gray-300 relative flex flex-col rounded-lg border px-8 py-10">
+                                        <div class="mb-4">
+                                            <img src="assets/images/quotes.svg" alt="" class="mb-4" />
+                                            <p>Creativity and professionalism at its best! Milan exceeded expectations in designing our product. The website and app received accolades, positively impacting user engagement. Highly recommended for top-notch design solutions.</p>
+                                        </div>
+                                        <div class="mt-auto">
+                                            <h3 class="text-2xl lg:text-3xl">Slesha</h3>
+                                            <p class="text-sm uppercase tracking-widest lg:text-base">Founder</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="border-gray-300 relative flex flex-col rounded-lg border px-8 py-10">
+                                        <div class="mb-4">
+                                            <img src="assets/images/quotes.svg" alt="" class="mb-4" />
+                                            <p>Incredible logo! Milan nailed our brand identity with a design that's both visually stunning and memorable. Highly recommended!</p>
+                                        </div>
+                                        <div class="mt-auto">
+                                            <h3 class="text-2xl lg:text-3xl">My Darling Food</h3>
+                                            <p class="text-sm uppercase tracking-widest lg:text-base">Influencer</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="border-gray-300 relative flex flex-col rounded-lg border px-8 py-10">
+                                        <div class="mb-4">
+                                            <img src="assets/images/quotes.svg" alt="" class="mb-4" />
+                                            <p>Love our new website! Milan nailed the modern, user-friendly design perfectly. Seamless collaboration and improved online presence. Highly recommended!</p>
+                                        </div>
+                                        <div class="mt-auto">
+                                            <h3 class="text-2xl lg:text-3xl">Suman</h3>
+                                            <p class="text-sm uppercase tracking-widest lg:text-base">Co-Founder</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Companies-->
+        <div class="bg-primary">
+            <div class="rounded-b-3xl bg-white px-4 py-12 lg:rounded-b-[80px] lg:py-24">
+                <div class="mx-auto text-center">
+                    <p class="mb-8 uppercase tracking-widest">COMPANIES WHO TRUSTED ME WITH THEIR PROJECT</p>
+                    <div class="mx-auto grid grid-cols-3 items-center justify-center opacity-75 lg:grid-cols-6">
+                        <div><img src="assets/images/logo-amooma.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-cliff.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-ins.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-iucn.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-b12.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-pcs.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-cassanga.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-anydone.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-akg.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-treeleaf.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-jimbu.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-hs.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-athina.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-st.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-clickagee.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-webbed.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-mydf.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                        <div><img src="assets/images/logo-tbcs.svg" alt="" class="mr-4 h-24 w-full" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer-->
+        <footer class="bg-primary pb-8 pt-16 lg:pt-32">
+            <div class="mx-auto max-w-7xl px-4 text-center">
+                <p class="mb-4 uppercase tracking-widest">Need A Designer?</p>
+                <h1 class="mb-4 text-center text-3xl lg:text-6xl">Let's make something together</h1>
+                <p class="mx-auto max-w-3xl text-lg font-light lg:text-2xl">I help businesses, organizations and individuals from around the world bring their projects to life. I would love to help you too.</p>
+                <a href="contact" class="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-100">Start a project <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                <!--Social Icons-->
+                <ul class="mt-10 flex justify-center space-x-4">
+                    <li>
+                        <a href="https://dribbble.com/milanmdhr" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-dribbble"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/milanmdhr/" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/uxmilan/" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:milanmdhr@gmail.com" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark"><i class="las la-envelope"></i></a>
+                    </li>
+                </ul>
+                <p class="mb-2 mt-10 text-sm text-green-900">&copy; 2024 All rights reserved.</p>
+                <p></p>
+                <p class="text-sm text-green-800">Designed & Coded with <i class="las la-heart animate-heart-beat text-red-600 opacity-100"></i> by Milan Manandhar</p>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <script>
+            new Glide('.glide', {
+                type: 'carousel',
+                perView: 4,
+                autoplay: 3000,
+                gap: 32,
+                startAt: 2,
+                focusAt: 'center',
+                breakpoints: {
+                    1280: {
+                        perView: 3,
+                        gap: 32,
+                        peek: {
+                            before: 60,
+                            after: 60,
+                        },
+                    },
+                    1024: {
+                        perView: 2,
+                        gap: 20,
+                    },
+                    768: {
+                        perView: 1,
+                        gap: 10,
+                        peek: {
+                            before: 30,
+                            after: 30,
+                        },
+                    },
+                },
+            }).mount()
+        </script>
+
+        <script>
+            let scrollpos = window.scrollY
+            const header = document.querySelector('nav')
+            const header_height = header.offsetHeight
+
+            const add_class_on_scroll = () => header.classList.add('fade-in', 'backdrop-blur')
+            const remove_class_on_scroll = () => header.classList.remove('fade-in', 'backdrop-blur')
+
+            window.addEventListener('scroll', function () {
+                scrollpos = window.scrollY
+
+                if (scrollpos >= header_height) {
+                    add_class_on_scroll()
+                } else {
+                    remove_class_on_scroll()
+                }
+            })
+        </script>
+
+        <script>
+            let mobscrollpos = window.scrollY
+            const mobheader = document.querySelector('header')
+            const mobheader_height = mobheader.offsetHeight
+
+            const mob_add_class_on_scroll = () => mobheader.classList.add('bg-dark')
+            const mob_remove_class_on_scroll = () => mobheader.classList.remove('bg-dark')
+
+            window.addEventListener('scroll', function () {
+                mobscrollpos = window.scrollY
+
+                if (mobscrollpos >= mobheader_height) {
+                    mob_add_class_on_scroll()
+                } else {
+                    mob_remove_class_on_scroll()
+                }
+            })
+        </script>
+    </body>
+</html>
