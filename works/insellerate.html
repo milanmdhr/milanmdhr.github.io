@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Milan Manandhar - Insellerate</title>
+        <link rel="shortcut icon" href="../assets/images/favicon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" integrity="sha512-tYKqO78H3mRRCHa75fms1gBvGlANz0JxjN6fVrMBvWL+vOOy200npwJ69OBl9XEsTu3yVUvZNrdWFIIrIf8FLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css" integrity="sha512-wCwx+DYp8LDIaTem/rpXubV/C1WiNRsEVqoztV0NZm8tiTvsUeSlA/Uz02VTGSiqfzAHD4RnqVoevMcRZgYEcQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXPJQHYWHZ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+                dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
+
+            gtag('config', 'G-ZXPJQHYWHZ')
+        </script>
+    </head>
+
+    <body x-data="{ navbarOpen: false, scrolledFromTop:false }" :class="{'overflow-hidden': navbarOpen, 'overflow-auto': !navbarOpen }" class="lg:overflow-auto">
+        <!--Navigation-->
+        <nav class="fixed z-50 hidden w-full bg-transparent py-6 transition-all duration-300 ease-in-out lg:block">
+            <div class="mx-auto max-w-7xl px-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex flex-shrink-0 items-center">
+                        <a href="/"> <img class="h-10 w-auto" src="../assets/images/logo.svg" alt="Milan Manandhar" /></a>
+                    </div>
+                    <div class="ml-6">
+                        <div class="flex space-x-4 text-white">
+                            <a href="../work" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Work</a>
+                            <a href="../about" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">About</a>
+                            <a href="../#services" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Services</a>
+                            <a href="https://medium.com/@milanmdhr" target="_blank" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Blog</a>
+                            <a href="../contact" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Let's Talk</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="../contact" class="inline-flex items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <header class="mobnav fixed z-50 block w-full lg:hidden">
+            <div class="flex items-center justify-between p-4">
+                <div>
+                    <a href="/"> <img class="h-10 w-auto" src="../assets/images/logo.svg" alt="Milan Manandhar" /></a>
+                </div>
+                <button @click="navbarOpen = !navbarOpen" class="relative h-4 w-6">
+                    <div class="absolute top-1/2 h-0.5 w-full -translate-y-1/2 bg-white transition duration-300 before:absolute before:-top-2 before:left-0 before:h-0.5 before:w-full before:bg-white before:transition-all before:duration-300 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-white after:transition-all after:duration-300" :class="{'rotate-45 before:opacity-0 before:top-0 after:-rotate-90 after:!bottom-0' : navbarOpen}"></div>
+                </button>
+            </div>
+            <div class="absolute left-0 right-0 top-full z-40 flex h-screen w-full translate-x-full transform flex-col justify-between overflow-y-auto bg-dark pb-[72px] transition duration-200" :class="{'translate-x-full': !navbarOpen, 'translate-x-0': navbarOpen}">
+                <ul class="px-8 pt-[20%]">
+                    <div class="flex flex-col space-y-4 text-center text-white">
+                        <a href="../work" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Work</a>
+                        <a href="../about" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">About</a>
+                        <a href="/#services" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Services</a>
+                        <a href="https://medium.com/@milanmdhr" target="_blank" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Blog</a>
+                        <a href="../contact" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Let's Talk</a>
+                    </div>
+                </ul>
+                <div class="p-8">
+                    <a href="../contact" class="flex items-center justify-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!--Main Content-->
+        <main>
+            <!--Hero-->
+            <div class="home-hero relative rounded-b-3xl bg-[#00AEEF] bg-center bg-no-repeat px-4 pt-32 lg:rounded-b-[80px]">
+                <!--Caption-->
+                <div class="caption mx-auto flex h-full max-w-7xl flex-col items-center justify-center pt-20 text-center text-white">
+                    <h1 class="mb-16 text-3xl font-bold md:text-5xl xl:text-8xl">Insellerate</h1>
+                    <img src="../assets/images/insellerate-mobile.png" alt="" class="rounded-t-lg" />
+                </div>
+            </div>
+        </main>
+
+        <!--About-->
+        <div class="py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <div class="grid grid-cols-1 justify-between gap-16 md:grid-cols-12">
+                    <div class="md:col-span-6">
+                        <p class="mb-4 uppercase tracking-widest">About the Project</p>
+                        <h1 class="mb-4 text-4xl lg:text-6xl">Project Background</h1>
+                        <p class="mb-4">Insellerate is a leading mortgage CRM platform that previously offered a robust web application. However, users faced challenges accessing the platform from mobile devices, which limited their ability to manage leads and engage with clients on the go. To address this issue, Insellerate commissioned the development of a mobile app that would replicate the full functionality of their web application, ensuring seamless access and enhanced user experience for loan officers.</p>
+                        <a href="https://apps.apple.com/us/app/insellerate/id1517753766?platform=iphone" class="mt-8 inline-flex h-[52px] items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400" target="_blank">Download App Now <i class="las la-arrow-right ml-2 -rotate-45 text-3xl"></i></a>
+                    </div>
+                    <div class="md:col-span-4">
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Agency</p>
+                            <p>Webbed Studio</p>
+                        </div>
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Year</p>
+                            <p>2019</p>
+                        </div>
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Roles</p>
+                            <div class="flex flex-wrap gap-2">
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Research & Discovery</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Wireframing</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Prototyping</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">UI/UX Design</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">App Design</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">User App Flow</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">User Journey</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">User Interviews</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Persona Creation</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Interaction & Visual Design</p>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Tools</p>
+                            <div class="flex flex-wrap gap-2">
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Figma</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Adobe XD</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Zeplin</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Trello</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Adobe CC</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Illustrator</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Photoshop</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Slack</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Banner 1-->
+        <div class="h-screen bg-[url('../images/insellerate-banner.jpg')] bg-cover bg-fixed bg-center bg-no-repeat"></div>
+        <p class="p-4 text-center font-light italic">Trendy angled mockups of Insellerate… but you are gonna learn all about this app in this case study!</p>
+
+        <!--How it started-->
+        <div class="py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">01. Start</p>
+                <h1 class="text-4xl lg:text-6xl">How it started.</h1>
+                <p class="mb-8">The project began with an initial meeting with Insellerate's stakeholders to understand their vision for the mobile app. The goal was to provide loan officers with the tools they need to engage borrowers, manage pipelines, and automate workflows from their mobile devices.</p>
+                <div class="grid grid-cols-1 justify-between gap-16 md:grid-cols-2">
+                    <div class="md:col-span-1">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">The Problem</h3>
+                        <ul class="list-disc space-y-2 pl-5">
+                            <li><strong>Limited Mobile Accessibility:</strong> Users faced difficulty accessing the Insellerate web application on mobile devices due to its lack of optimization for smaller screens and touch interfaces.</li>
+                            <li><strong>Cumbersome User Experience:</strong> The web application’s interface was not user-friendly on mobile devices, leading to a cumbersome and inefficient experience for loan officers who needed to manage leads and communicate with clients on the go​.</li>
+                            <li><strong>Fragmented Functionality:</strong> Users needed to log into different systems (CRM and LOS) to access all necessary information, which was time-consuming and disruptive to their workflow.</li>
+                            <li><strong>Inefficient Communication Tools:</strong> Existing communication tools within the web application were not optimized for mobile use, hindering quick and effective borrower engagement.</li>
+                            <li><strong>Lack of On-the-Go Access:</strong> Loan officers, who often work remotely or in the field, lacked the ability to access critical CRM tools and information away from their desktops.</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-1">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">The Solution</h3>
+                        <ul class="list-disc space-y-2 pl-5">
+                            <li><strong>Development of a Mobile App:</strong> A dedicated mobile app was developed to provide a seamless and responsive experience on mobile devices, replicating the full functionality of the web application.</li>
+                            <li><strong>User-Centered Design Approach:</strong> The mobile app was designed with an intuitive interface, ensuring ease of navigation and accessibility of key features such as lead management, pipeline tracking, and communication tools.</li>
+                            <li><strong>Integrated System Access:</strong> The mobile app integrated CRM and LOS functionalities, allowing users to access all necessary information within a single platform, thereby streamlining workflows and improving efficiency.</li>
+                            <li><strong>Optimized Communication Features:</strong> Enhanced communication tools, including click-to-call, inbound call routing, and two-way compliant text messaging, were incorporated to facilitate quick and effective borrower engagement directly from the mobile app​.</li>
+                            <li><strong>Enhanced Mobile Functionality:</strong> The app was designed to support mobile-specific features such as offline access, push notifications, and real-time updates, ensuring loan officers can stay productive and informed even when on the move​.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Research-->
+        <div class="bg-dark py-16 text-white lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">02. Research</p>
+                <h1 class="mb-4 text-4xl lg:text-6xl">Research & Discovery</h1>
+                <p class="mb-12 text-gray">The research phase was crucial in ensuring the success of the Insellerate mobile app. It involved understanding the client’s needs, the market landscape, and the users' requirements. This phase provided the foundation for informed design decisions, ensuring that the final product met user expectations and business goals.</p>
+
+                <div class="mb-10 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Understanding the Client and Market</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-gray">I started by gaining a comprehensive understanding of Insellerate’s business model, services, and market position. This involved reviewing Insellerate’s existing web application and features. I studied the mortgage industry to understand how CRM tools are utilized by loan officers and analyzed Insellerate’s unique value proposition and how it differentiates from competitors.</p>
+                    </div>
+                </div>
+
+                <div class="mb-10 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Analyzing the Competition</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-gray">To ensure the Insellerate app would be competitive, I conducted a thorough analysis of other CRM solutions available in the market. This involved identifying direct and indirect competitors, evaluating their apps to identify strengths, weaknesses, and common features, and analyzing user reviews and feedback on competitor apps to understand common pain points and best practices.</p>
+                    </div>
+                </div>
+
+                <div class="mb-10 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Identifying Target Audience</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-gray">Understanding the target audience was key to designing a user-centric app. I identified the primary users as loan officers and managers within the mortgage industry. These professionals are often on the move and require mobile access to CRM tools, need efficient lead management and communication tools, and managers need real-time insights to oversee team performance.</p>
+                    </div>
+                </div>
+
+                <div class="mb-12 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Gathering User Insights</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-gray">I conducted surveys, interviews, and focus groups with current Insellerate users to gather direct feedback on their experiences and expectations. Surveys provided quantitative data on user preferences and pain points, one-on-one interviews delved deeper into specific user needs and challenges, and focus groups facilitated discussions and gathered diverse perspectives.</p>
+                    </div>
+                </div>
+                <h3 class="mb-8 text-2xl lg:text-3xl">Key Findings</h3>
+                <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-leads-sky.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Quick Access to Leads</h3>
+                        <p class="text-gray">Users expressed a strong need for rapid access to lead information. Loan officers emphasized that being able to quickly view and manage leads from their mobile devices was crucial for maintaining productivity and ensuring timely follow-ups with clients.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-message-sky.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Efficient Communication Tools</h3>
+                        <p class="text-gray">Effective communication was highlighted as a top priority. Users needed tools that would allow them to easily call, text, or email clients directly from the app. This capability was essential for staying connected with borrowers and maintaining strong relationships.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-mobile-sky.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Mobile Optimization for Remote Work</h3>
+                        <p class="text-gray">With many loan officers working remotely or frequently on the move, mobile optimization became essential. Users required a mobile app that was not just a scaled-down version of the web application but was fully optimized for mobile use, offering seamless navigation and functionality.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-content-sky.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">User-Friendly Interface</h3>
+                        <p class="text-gray">The importance of a user-friendly interface was repeatedly underscored. Users needed an intuitive design that would minimize the learning curve and make daily tasks more efficient. A well-designed interface was seen as crucial for user satisfaction and app adoption.</p>
+                    </div>
+                </div>
+
+                <h3 class="mb-8 text-2xl lg:text-3xl">Personas</h3>
+                <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <div class="mb-4 flex items-center space-x-4">
+                            <img src="../assets/images/pp-mike.png" alt="" class="mb-4 w-20 rounded-full md:w-28" />
+                            <div>
+                                <h3 class="mb-1 text-2xl lg:mb-2 lg:text-3xl">Mike, 28</h3>
+                                <p class="text-gray">Mortgage Broker</p>
+                            </div>
+                        </div>
+
+                        <p class="mb-3 text-gray"><span class="font-medium uppercase tracking-wider text-primary">GOALS:</span> Close more deals, manage clients efficiently, access tools on the go.</p>
+                        <p class="mb-3 text-gray"><span class="font-medium uppercase tracking-wider text-primary">FRUSTRATIONS:</span> Trouble accessing Insellerate on mobile, delayed responses, keeping track of clients.</p>
+                        <p class="text-gray"><span class="font-medium uppercase tracking-wider text-primary">NEEDS:</span> Easy mobile access to client info, smooth communication, real-time notifications.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <div class="mb-4 flex items-center space-x-4">
+                            <img src="../assets/images/pp-laura.png" alt="" class="mb-4 w-20 rounded-full md:w-28" />
+                            <div>
+                                <h3 class="mb-1 text-2xl lg:mb-2 lg:text-3xl">Laura, 32</h3>
+                                <p class="text-gray">Loan Officer</p>
+                            </div>
+                        </div>
+
+                        <p class="mb-3 text-gray"><span class="font-medium uppercase tracking-wider text-primary">GOALS:</span> Manage leads effectively, improve client satisfaction, work remotely.</p>
+                        <p class="mb-3 text-gray"><span class="font-medium uppercase tracking-wider text-primary">FRUSTRATIONS:</span> Limited mobile access to Insellerate, task prioritization, communication issues.</p>
+                        <p class="text-gray"><span class="font-medium uppercase tracking-wider text-primary">NEEDS:</span> Mobile app with CRM features, user-friendly interface, seamless integration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-16 lg:pt-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">03. Design Process</p>
+                <h1 class="mb-4 text-4xl lg:text-6xl">Wireframes</h1>
+                <p class="mb-12 text-gray">The wireframing process was an essential step in the designing the Insellerate mobile application. It served as a blueprint, outlining the basic structure and layout of each screen and interface element before diving into detailed design.</p>
+            </div>
+        </div>
+
+        <img src="../assets/images/insellerate-wireframe.jpg" alt="" class="w-full" />
+
+        <!-- <div class="mx-auto max-w-7xl px-4"><hr /></div> -->
+        <div class="py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <h1 class="mb-4 text-4xl lg:text-6xl">Global Design System</h1>
+                <p class="mb-12 text-gray">A robust global design system was implemented to ensure consistency and coherence throughout the Insellerate mobile app. This system encompassed various elements, including typography, color palette, and UI components, to create a unified and visually appealing user experience.</p>
+                <div class="grid grid-cols-1 justify-between gap-16 md:grid-cols-12">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Typography</h3>
+                        <img src="../assets/images/insellerate-typography.svg" alt="" class="w-full" />
+                    </div>
+                    <div class="md:col-span-8">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Color palette</h3>
+                        <div class="grid grid-cols-1 gap-x-8 md:grid-cols-2">
+                            <div>
+                                <div class="mb-4 rounded bg-[#00AEEF] p-5 text-xl tracking-widest text-white">#00AEEF</div>
+                                <div class="mb-4 rounded bg-[#008AC1] p-5 text-xl tracking-widest text-white">#008AC1</div>
+                                <div class="mb-4 rounded bg-[#33CC99] p-5 text-xl tracking-widest text-white">#33CC99</div>
+                                <div class="mb-4 rounded bg-[#40CBD8] p-5 text-xl tracking-widest text-white">#40CBD8</div>
+                                <div class="mb-4 rounded bg-[#FDA15F] p-5 text-xl tracking-widest text-white">#FDA15F</div>
+                                <div class="mb-4 rounded bg-[#EC6D9B] p-5 text-xl tracking-widest text-white">#EC6D9B</div>
+                                <div class="mb-4 rounded bg-[#335EA8] p-5 text-xl tracking-widest text-white">#335EA8</div>
+                            </div>
+                            <div>
+                                <div class="mb-4 rounded bg-[#EB0028] p-5 text-xl tracking-widest text-white">#EB0028</div>
+                                <div class="mb-4 rounded bg-[#667685] p-5 text-xl tracking-widest text-white">#667685</div>
+                                <div class="mb-4 rounded bg-[#121619] p-5 text-xl tracking-widest text-white">#121619</div>
+                                <div class="mb-4 rounded bg-[#000000] p-5 text-xl tracking-widest text-white">#000000</div>
+                                <div class="mb-4 rounded bg-[#BBBBBB] p-5 text-xl tracking-widest text-dark">#BBBBBB</div>
+                                <div class="mb-4 rounded border bg-[#F0EEEE] p-5 text-xl tracking-widest text-dark">#F0EEEE</div>
+                                <div class="mb-4 rounded border bg-[#FFFFFF] p-5 text-xl tracking-widest text-dark">#FFFFFF</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-12">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Components</h3>
+                        <img src="../assets/images/insellerate-components.svg" alt="" class="w-full" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#E5F7FD] py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <h1 class="mb-4 text-4xl lg:text-6xl">Explorations, usability testing and iterations</h1>
+                <p class="mb-12 text-gray">This phase was a crucial part of the UI/UX design process for the Insellerate mobile app, involving repeated cycles of designing, testing, and refining to ensure the app met user needs and business goals.</p>
+                <div class="mb-16">
+                    <h3 class="mb-3 text-2xl lg:text-3xl">Dashboard</h3>
+                    <p class="mb-4">I analyzed the four screen designs based on usability, visual hierarchy, and overall user experience, noting the pros and cons of each. I then presented my findings to the customer, focusing on key aspects like ease of use, readability, and visual appeal. The customer provided feedback, appreciating the clean and professional look of the fourth design. Based on this feedback, we chose the first design <strong class="uppercase tracking-widest text-[#00AEEF]">"Version 1"</strong> for its minimalistic approach and clear readability, ensuring it met the customer’s expectations and user experience needs.</p>
+
+                    <p class="mb-4">The <strong class="uppercase tracking-widest text-[#00AEEF]">"Version 1"</strong> was determined as the best choice overall. Here’s why:</p>
+                    <ul class="mb-4 list-disc space-y-2 pl-5">
+                        <li><strong>Clean and Minimalistic:</strong> Less clutter and use of minimal color make it easy to focus on key information.</li>
+                        <li><strong>Good Visual Hierarchy:</strong> Clear separation and ample white space make it easy to scan quickly.</li>
+                        <li><strong>Professional Look:</strong> The simplicity gives a modern and professional appearance.</li>
+                        <li><strong>Readability:</strong> Text and icons are clear and easy to read.</li>
+                    </ul>
+                    <p>This design strikes the best balance between simplicity, readability, and professionalism.</p>
+                    <div class="mt-8 grid grid-cols-2 justify-between gap-4 text-center md:grid-cols-4 md:gap-8">
+                        <div>
+                            <p class="mb-4 text-xs uppercase md:text-base">Version 1</p>
+                            <img src="../assets/images/insellerate-home-v1.png" alt="" class="w-full" />
+                            <p class="mt-4 text-xl md:text-4xl">✅</p>
+                        </div>
+                        <div>
+                            <p class="mb-4 text-xs uppercase tracking-widest md:text-base">Version 2</p>
+                            <img src="../assets/images/insellerate-home-v2.png" alt="" class="w-full" />
+                            <p class="mt-4 text-xl md:text-4xl">❌</p>
+                        </div>
+                        <div>
+                            <p class="mb-4 text-xs uppercase tracking-widest md:text-base">Version 3</p>
+                            <img src="../assets/images/insellerate-home-v3.png" alt="" class="w-full" />
+                            <p class="mt-4 text-xl md:text-4xl">❌</p>
+                        </div>
+                        <div>
+                            <p class="mb-4 text-xs uppercase tracking-widest md:text-base">Version 4</p>
+                            <img src="../assets/images/insellerate-home-v4.png" alt="" class="w-full" />
+                            <p class="mt-4 text-xl md:text-4xl">❌</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-16 grid grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
+                    <div>
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Lead Detail</h3>
+                        <p class="mb-4">Between the two designs, the first design <strong class="uppercase tracking-widest text-[#00AEEF]">"Version 1"</strong> stands out as the better option for several reasons:</p>
+                        <ul class="mb-4 list-disc space-y-2 pl-5">
+                            <li><strong>Easy Navigation:</strong> Email, SMS, and other links are fixed at the bottom, making them always accessible.</li>
+                            <li><strong>Comprehensive Information Display:</strong> It shows the source, campaign, and loan amount at the top, giving a quick overview.</li>
+                            <li><strong>Edit Option:</strong> The edit button at the top makes it easy to make changes.</li>
+                            <li><strong>Status Tag:</strong> The "Default" tag shows the lead's status clearly.</li>
+                            <li><strong>Tabbed Sections:</strong> Tabs for Details, Notes, Associated Applications, and History help organize information and make it easy to find.</li>
+                        </ul>
+                        <p>In conclusion, the first design offers better usability and functionality due to its fixed action buttons, detailed information display, convenient edit option, status tagging, and organized tabbed navigation.</p>
+                    </div>
+                    <div class="grid grid-cols-2 justify-between gap-4 text-center md:gap-8">
+                        <div>
+                            <p class="mb-4 text-xs uppercase tracking-widest md:text-base">Version 1</p>
+                            <img src="../assets/images/insellerate-home-v1.png" alt="" class="w-full" />
+                            <p class="mt-4 text-xl md:text-4xl">✅</p>
+                        </div>
+                        <div>
+                            <p class="mb-4 text-xs uppercase tracking-widest md:text-base">Version 2</p>
+                            <img src="../assets/images/insellerate-home-v2.png" alt="" class="w-full" />
+                            <p class="mt-4 text-xl md:text-4xl">❌</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-16 grid grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
+                    <div class="grid grid-cols-2 justify-between gap-4 text-center md:gap-8">
+                        <div>
+                            <p class="mb-4 text-xs uppercase tracking-widest md:text-base">Version 1</p>
+                            <img src="../assets/images/insellerate-home-v1.png" alt="" class="w-full" />
+                            <p class="mt-4 text-xl md:text-4xl">✅</p>
+                        </div>
+                        <div>
+                            <p class="mb-4 text-xs uppercase tracking-widest md:text-base">Version 2</p>
+                            <img src="../assets/images/insellerate-home-v2.png" alt="" class="w-full" />
+                            <p class="mt-4 text-xl md:text-4xl">❌</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Search</h3>
+                        <p class="mb-4">Both designs have their merits, but the first design <strong class="uppercase tracking-widest text-[#00AEEF]">"VERSION 1"</strong> (on the left) seems to be more effective overall. Here’s why:</p>
+                        <ul class="list-disc space-y-2 pl-5">
+                            <li><strong>Filter Placement:</strong> Filters are directly below the search box, allowing users to quickly refine their searches.</li>
+
+                            <li><strong>Quick Access:</strong> Users can easily switch between different search criteria like Last Name, Reference ID, and Campaign.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mb-32">
+                    <h3 class="mb-3 text-2xl lg:text-3xl">Engaging Copy and Delightful Illustrations</h3>
+                    <p class="mb-4">To make Insellerate feel conversational and engaging, I focused on creating friendly copy and delightful illustrations. I paid special attention to empty states, error states, and loading screens, which are often overlooked. By enhancing these areas, I aimed to make every user interaction pleasant and engaging.</p>
+                    <div class="mt-8 grid grid-cols-2 justify-between gap-4 text-center md:grid-cols-4 md:gap-8">
+                        <div>
+                            <img src="../assets/images/insellerate-home-v1.png" alt="" class="w-full" />
+                            <p class="mt-4 text-xs uppercase md:text-base">NO SEARCH</p>
+                        </div>
+                        <div>
+                            <img src="../assets/images/insellerate-home-v2.png" alt="" class="w-full" />
+                            <p class="mt-4 text-xs uppercase tracking-widest md:text-base">NO RESULTS FOUND</p>
+                        </div>
+                        <div>
+                            <img src="../assets/images/insellerate-home-v3.png" alt="" class="w-full" />
+                            <p class="mt-4 text-xs uppercase tracking-widest md:text-base">NO MESSAGES</p>
+                        </div>
+                        <div>
+                            <img src="../assets/images/insellerate-home-v4.png" alt="" class="w-full" />
+                            <p class="mt-4 text-xs uppercase tracking-widest md:text-base">NO NOTES</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mx-auto max-w-5xl px-4 text-center">
+                <h1 class="mb-4 text-4xl lg:text-6xl">Final Designs</h1>
+                <p class="mb-12 text-gray">The final visual designs of the Insellerate mobile app was meticulously crafted to deliver a modern, intuitive, and visually engaging user experience. Drawing inspiration from industry trends, user preferences, and Insellerate's brand identity, the visual design aimed to captivate users while enhancing usability and functionality.</p>
+            </div>
+            <!--Screenshots-->
+            <div class="mx-auto max-w-7xl px-4">
+                <!--Login & Dashboard-->
+                <div class="mb-16 grid grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
+                    <div>
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Login & Dashboard</h3>
+                        <p>The login screen allows users to enter their credentials to access the app, while the dashboard provides an overview of key functionalities and information upon successful login in a card-based layout, a well-regarded approach in UI/UX Design. There's even a greeting at the top, like "Hello Thomas!" which personalizes the experience. The navigation bar at the bottom lets you easily jump to different sections of the app.</p>
+                    </div>
+                    <div class="grid grid-cols-2 justify-between gap-4 text-center md:gap-8">
+                        <div>
+                            <img src="../assets/images/01-insellerate-login.png" alt="" class="w-full" />
+                        </div>
+                        <div>
+                            <img src="../assets/images/02-insellerate-dashboard.png" alt="" class="w-full" />
+                        </div>
+                    </div>
+                </div>
+                <!--Profile-->
+                <div class="mb-16 grid grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
+                    <div class="grid grid-cols-2 justify-between gap-4 text-center md:gap-8">
+                        <div>
+                            <img src="../assets/images/03-insellerate-profile.png" alt="" class="w-full" />
+                        </div>
+                        <div>
+                            <img src="../assets/images/04-insellerate-profileedit.png" alt="" class="w-full" />
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Profile</h3>
+                        <p>The Insellerate profile screens prioritize a user-friendly experience by keeping things clear and concise. They display essential information like name, contact details, and relevant metrics, and avoid cluttering the screen. The right screen allows for easy editing directly within the app, eliminating the need for complex navigation. Finally, a clear "SAVE" button ensures users understand how to save their updates. Overall, these screens follow best practices in UI/UX design for user profiles by focusing on clarity, ease of editing, and user-friendly information management.</p>
+                    </div>
+                </div>
+                <!--Pipeline-->
+                <div class="mb-16 grid grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
+                    <div>
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Pipeline</h3>
+                        <p>The Pipeline screen lets you search for specific deals by using the magnifying glass at the top right. Alerts screen shows information in cards with titles like "Source" and "Next Step" to make it easy to read. Overall, these screens are user-friendly because they have clear labels, well-organized information, and possibly features like search and color-coding to help you find what you need fast.</p>
+                    </div>
+                    <div class="grid grid-cols-2 justify-between gap-4 text-center md:gap-8">
+                        <div>
+                            <img src="../assets/images/05-insellerate-pipeline.png" alt="" class="w-full" />
+                        </div>
+                        <div>
+                            <img src="../assets/images/06-insellerate-alert.png" alt="" class="w-full" />
+                        </div>
+                    </div>
+                </div>
+                <!--Calendar-->
+                <div class="mb-16 grid grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
+                    <div class="grid grid-cols-2 justify-between gap-4 text-center md:gap-8">
+                        <div>
+                            <img src="../assets/images/07-insellerate-calendar.png" alt="" class="w-full" />
+                        </div>
+                        <div>
+                            <img src="../assets/images/08-insellerate-calendarblank.png" alt="" class="w-full" />
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Calendar</h3>
+                        <p>This calendar screen incorporates best practices for a user-friendly experience. The current month and date are prominent, and the highlighted current day helps you orient yourself quickly. The week view provides a clear overview of your upcoming schedule, and squares on certain dates visually indicate events without cluttering the screen. Overall, the clean interface with clear information presentation allows you to see your schedule and identify important dates at a glance.</p>
+                    </div>
+                </div>
+                <!--SMS-->
+                <div class="mb-16 grid grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
+                    <div>
+                        <h3 class="mb-3 text-2xl lg:text-3xl">SMS</h3>
+                        <p>The SMS screens in the app are easy to use. The first screen shows who you texted recently and even lets you see the last message. In each conversation (second screen), the other person's name is at the top, and the messages are organized clearly with timestamps. You can easily tell who sent what because the messages look different. Typing a new message is simple with a box at the bottom and a "Send" button next to it. Overall, everything is clear and familiar, so you can chat with ease!</p>
+                    </div>
+                    <div class="grid grid-cols-2 justify-between gap-4 text-center md:gap-8">
+                        <div>
+                            <img src="../assets/images/09-insellerate-sms.png" alt="" class="w-full" />
+                        </div>
+                        <div>
+                            <img src="../assets/images/10-insellerate-chat.png" alt="" class="w-full" />
+                        </div>
+                    </div>
+                </div>
+                <!--Calendar-->
+                <div class="mb-16 grid grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
+                    <div class="grid grid-cols-2 justify-between gap-4 text-center md:gap-8">
+                        <div>
+                            <img src="../assets/images/11-insellerate-logout.png" alt="" class="w-full" />
+                        </div>
+                        <div>
+                            <img src="../assets/images/12-insellerate-nointernet.png" alt="" class="w-full" />
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Alerts</h3>
+                        <p>These pop-up alerts in the app keep things clear and simple. They use easy-to-understand messages, like asking for confirmation before you log out or letting you know there's no internet connection. The buttons are clear too, with options like "Cancel" and "Log out" or "Try Again". The important message itself stands out, so you know what's going on before you take action. These pop-ups don't block your whole screen either, so you can still see what you were doing in the app. Overall, they make it easy to understand what's happening and take the right action</p>
+                    </div>
+                </div>
+
+                <h3 class="mb-3 text-2xl lg:text-3xl">Other Screens</h3>
+            </div>
+
+            <div class="mt-8 px-16 lg:mt-16">
+                <img src="../assets/images/insellerate-all-screens.png" class="w-full" alt="" />
+            </div>
+        </div>
+
+        <!--Conslusion-->
+        <div class="bg-dark py-16 text-white lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">04. Conclusion</p>
+                <h1 class="mb-4 text-4xl lg:text-6xl">Key Learnings</h1>
+                <p class="mb-12 text-gray">Insights from the Insellerate App Design Project.</p>
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-mobile-sky.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Mobile Access Matters</h3>
+                        <p class="text-gray">The project showed how crucial it is to make apps accessible on mobile devices. By creating a dedicated mobile app, Insellerate improved user experience and engagement since users increasingly rely on mobile for accessing services.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-user-sky.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Focus on Users</h3>
+                        <p class="text-gray">Prioritizing user needs and preferences led to a more successful design. By researching, gathering feedback, and iterating, the team created an app that met users' expectations, resulting in better engagement and satisfaction.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-refresh-sky.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Iterate for Improvement</h3>
+                        <p class="text-gray">Iterative design, involving cycles of prototyping, testing, and refining, was key to improving the app's design and usability. This approach allowed for early identification and resolution of issues, leading to a better final product.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-message-sky.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Communication is Key</h3>
+                        <p class="text-gray">Clear communication among team members, stakeholders, and clients ensured everyone stayed aligned throughout the project. Regular updates and feedback sessions facilitated collaboration, helping the team overcome challenges and deliver a successful outcome.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Banner 2-->
+        <!-- <div class="h-screen bg-[url('../images/amooma-banner2.png')] bg-cover bg-fixed bg-center bg-no-repeat"></div> -->
+
+        <!--Suggestions-->
+        <div class="bg-primary">
+            <div class="rounded-b-3xl bg-white py-16 lg:rounded-b-[80px] lg:py-32">
+                <div class="mx-auto max-w-7xl px-4">
+                    <h1 class="mb-8 text-center text-4xl md:text-left lg:text-6xl">More to explore</h1>
+                    <div class="grid grid-cols-1 justify-between gap-y-8 md:grid-cols-2">
+                        <div class="flex items-center gap-x-5 lg:gap-x-8">
+                            <a href="aja-dynasty"><img src="../assets/images/aja-web.png" alt="" class="h-32 rounded-md duration-300 ease-in-out hover:scale-110" /></a>
+                            <div>
+                                <a href="aja-dynasty" class="mb-2 inline-flex items-center rounded-full uppercase tracking-widest text-dark hover:text-primary"><i class="las la-arrow-right mr-2 rotate-[135deg] text-xl md:text-3xl"></i> Previous </a>
+                                <a href="aja-dynasty" class="hover:text-primary"><h3 class="mb-1 text-2xl md:text-3xl">Aja Dynasty</h3></a>
+                                <a href="aja-dynasty" class="uppercase hover:text-primary"><p>UI/UX/WEB DESIGN &bull; 2024</p></a>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="flex items-center justify-end gap-x-5 lg:gap-x-8">
+                                <div>
+                                    <a href="the-cliff-nepal" class="mb-2 inline-flex items-center rounded-full uppercase tracking-widest text-dark hover:text-primary">Next Up <i class="las la-arrow-right ml-2 -rotate-45 text-xl md:text-3xl"></i></a>
+                                    <a href="the-cliff-nepal" class="hover:text-primary"><h3 class="mb-1 text-2xl md:text-3xl">The Cliff Nepal</h3></a>
+                                    <a href="the-cliff-nepal" class="uppercase hover:text-primary"><p>UI/UX/WEB DESIGN &bull; 2023</p></a>
+                                </div>
+                                <a href="the-cliff-nepal"><img src="../assets/images/cliff-showcase.jpg" alt="" class="h-32 rounded-md bg-blue-100 duration-300 ease-in-out hover:scale-110" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer-->
+        <footer class="bg-primary px-4 pb-8 pt-16 lg:pt-32">
+            <div class="mx-auto max-w-7xl text-center">
+                <p class="mb-4 uppercase tracking-widest">Need A Designer?</p>
+                <h1 class="mb-4 text-center text-3xl lg:text-6xl">Let's make something together</h1>
+                <p class="mx-auto max-w-3xl text-lg font-light lg:text-2xl">I help businesses, organizations and individuals from around the world bring their projects to life. I would love to help you too.</p>
+                <a href="../contact" class="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-100">Start a project <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                <!--Social Icons-->
+                <ul class="mt-10 flex justify-center space-x-4">
+                    <li>
+                        <a href="https://dribbble.com/milanmdhr" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-dribbble"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/milanmdhr/" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/uxmilan/" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:milanmdhr@gmail.com" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark"><i class="las la-envelope"></i></a>
+                    </li>
+                </ul>
+                <p class="mb-2 mt-10 text-sm text-green-900">&copy; 2024 All rights reserved.</p>
+                <p></p>
+                <p class="text-sm text-green-800">Designed & Coded with <i class="las la-heart animate-heart-beat text-red-600 opacity-100"></i> by Milan Manandhar</p>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <script>
+            new Glide('.glide', {
+                type: 'carousel',
+                perView: 4,
+                autoplay: 3000,
+                gap: 32,
+                startAt: 2,
+                focusAt: 'center',
+                breakpoints: {
+                    1280: {
+                        perView: 3,
+                        gap: 32,
+                        peek: {
+                            before: 60,
+                            after: 60,
+                        },
+                    },
+                    1024: {
+                        perView: 2,
+                        gap: 20,
+                    },
+                    768: {
+                        perView: 1,
+                        gap: 10,
+                        peek: {
+                            before: 30,
+                            after: 30,
+                        },
+                    },
+                },
+            }).mount()
+        </script>
+
+        <script>
+            let scrollpos = window.scrollY
+            const header = document.querySelector('nav')
+            const header_height = header.offsetHeight
+
+            const add_class_on_scroll = () => header.classList.add('fade-in', 'backdrop-blur')
+            const remove_class_on_scroll = () => header.classList.remove('fade-in', 'backdrop-blur')
+
+            window.addEventListener('scroll', function () {
+                scrollpos = window.scrollY
+
+                if (scrollpos >= header_height) {
+                    add_class_on_scroll()
+                } else {
+                    remove_class_on_scroll()
+                }
+            })
+        </script>
+
+        <script>
+            let mobscrollpos = window.scrollY
+            const mobheader = document.querySelector('header')
+            const mobheader_height = mobheader.offsetHeight
+
+            const mob_add_class_on_scroll = () => mobheader.classList.add('bg-dark')
+            const mob_remove_class_on_scroll = () => mobheader.classList.remove('bg-dark')
+
+            window.addEventListener('scroll', function () {
+                mobscrollpos = window.scrollY
+
+                if (mobscrollpos >= mobheader_height) {
+                    mob_add_class_on_scroll()
+                } else {
+                    mob_remove_class_on_scroll()
+                }
+            })
+        </script>
+    </body>
+</html>
