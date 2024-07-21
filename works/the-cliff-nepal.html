@@ -55,7 +55,7 @@
                 <div>
                     <a href="/"> <img class="h-10 w-auto" src="../assets/images/logo.svg" alt="Milan Manandhar" /></a>
                 </div>
-                <button @click="navbarOpen = !navbarOpen" class="relative h-4 w-6">
+                <button @click="navbarOpen = !navbarOpen" class="relative h-4 w-6" id="navButton" aria-label="Nav Button">
                     <div class="absolute top-1/2 h-0.5 w-full -translate-y-1/2 bg-white transition duration-300 before:absolute before:-top-2 before:left-0 before:h-0.5 before:w-full before:bg-white before:transition-all before:duration-300 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-white after:transition-all after:duration-300" :class="{'rotate-45 before:opacity-0 before:top-0 after:-rotate-90 after:!bottom-0' : navbarOpen}"></div>
                 </button>
             </div>
@@ -91,13 +91,13 @@
         <div class="py-16 lg:py-32">
             <div class="mx-auto max-w-7xl px-4">
                 <div class="grid grid-cols-1 justify-between gap-16 md:grid-cols-12">
-                    <div class="md:col-start-1 md:col-span-6">
+                    <div class="md:col-span-6 md:col-start-1">
                         <p class="mb-4 uppercase tracking-widest">About the Project</p>
                         <h1 class="mb-4 text-4xl lg:text-6xl">Project Background</h1>
                         <p class="mb-4">The Cliff Nepal is an adventure tourism company located in Kushma, Nepal, known for hosting the world's second-highest bungee jump, they attract thrill-seekers and adventure enthusiasts from around the globe. The client sought a comprehensive redesign of their website to better capture the thrilling experience they offer, enhance user engagement, and drive more bookings. The ultimate objective was to create a modern, user-friendly website that would enhance The Cliff Nepal's online presence and drive business growth.</p>
                         <a href="https://thecliffnepal.com/" class="mt-8 inline-flex h-[52px] items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400" target="_blank">View Live Website <i class="las la-arrow-right ml-2 -rotate-45 text-3xl"></i></a>
                     </div>
-                    <div class="md:col-end-13 md:col-span-5">
+                    <div class="md:col-span-5 md:col-end-13">
                         <div class="mb-8">
                             <p class="mb-4 uppercase tracking-widest">Agency</p>
                             <p>Source Taggers</p>
