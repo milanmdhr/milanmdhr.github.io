@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Milan Manandhar - anydone</title>
+        <link rel="shortcut icon" href="../assets/images/favicon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" integrity="sha512-tYKqO78H3mRRCHa75fms1gBvGlANz0JxjN6fVrMBvWL+vOOy200npwJ69OBl9XEsTu3yVUvZNrdWFIIrIf8FLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css" integrity="sha512-wCwx+DYp8LDIaTem/rpXubV/C1WiNRsEVqoztV0NZm8tiTvsUeSlA/Uz02VTGSiqfzAHD4RnqVoevMcRZgYEcQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXPJQHYWHZ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+                dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
+
+            gtag('config', 'G-ZXPJQHYWHZ')
+        </script>
+    </head>
+
+    <body x-data="{ navbarOpen: false, scrolledFromTop:false }" :class="{'overflow-hidden': navbarOpen, 'overflow-auto': !navbarOpen }" class="lg:overflow-auto">
+        <!--Navigation-->
+        <nav class="fixed z-50 hidden w-full bg-transparent py-6 transition-all duration-300 ease-in-out lg:block">
+            <div class="mx-auto max-w-7xl px-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex flex-shrink-0 items-center">
+                        <a href="/"> <img class="h-10 w-auto" src="../assets/images/logo.svg" alt="Milan Manandhar" /></a>
+                    </div>
+                    <div class="ml-6">
+                        <div class="flex space-x-4 text-white">
+                            <a href="../work" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Work</a>
+                            <a href="../about" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">About</a>
+                            <a href="../#services" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Services</a>
+                            <a href="https://medium.com/@milanmdhr" target="_blank" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Blog</a>
+                            <a href="../contact" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Let's Talk</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="../contact" class="inline-flex items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <header class="mobnav fixed z-50 block w-full lg:hidden">
+            <div class="flex items-center justify-between p-4">
+                <div>
+                    <a href="/"> <img class="h-10 w-auto" src="../assets/images/logo.svg" alt="Milan Manandhar" /></a>
+                </div>
+                <button @click="navbarOpen = !navbarOpen" class="relative h-4 w-6" id="navButton" aria-label="Nav Button">
+                    <div class="absolute top-1/2 h-0.5 w-full -translate-y-1/2 bg-white transition duration-300 before:absolute before:-top-2 before:left-0 before:h-0.5 before:w-full before:bg-white before:transition-all before:duration-300 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-white after:transition-all after:duration-300" :class="{'rotate-45 before:opacity-0 before:top-0 after:-rotate-90 after:!bottom-0' : navbarOpen}"></div>
+                </button>
+            </div>
+            <div class="absolute left-0 right-0 top-full z-40 flex h-screen w-full translate-x-full transform flex-col justify-between overflow-y-auto bg-dark pb-[72px] transition duration-200" :class="{'translate-x-full': !navbarOpen, 'translate-x-0': navbarOpen}">
+                <ul class="px-8 pt-[20%]">
+                    <div class="flex flex-col space-y-4 text-center text-white">
+                        <a href="../work" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Work</a>
+                        <a href="../about" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">About</a>
+                        <a href="/#services" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Services</a>
+                        <a href="https://medium.com/@milanmdhr" target="_blank" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Blog</a>
+                        <a href="../contact" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Let's Talk</a>
+                    </div>
+                </ul>
+                <div class="p-8">
+                    <a href="../contact" class="flex items-center justify-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!--Main Content-->
+        <main>
+            <!--Hero-->
+            <div class="home-hero relative rounded-b-3xl bg-[#3696e9] bg-center bg-no-repeat px-4 pt-32 lg:rounded-b-[80px]">
+                <!--Caption-->
+                <div class="caption mx-auto flex h-full max-w-7xl flex-col items-center justify-center pt-20 text-center text-white">
+                    <p class="mb-4 flex items-center justify-end font-light uppercase tracking-widest">
+                        SaaS, Productivity <span class="ml-4 border-l pl-4"><img src="../assets/images/flag-USA.avif" alt="" class="h-6" /></span>
+                    </p>
+                    <h1 class="mx-auto mb-16 max-w-5xl text-center text-3xl font-bold !leading-snug md:text-5xl xl:text-5xl">Optimizing Design and Code for anydone: Crafting a Responsive, Pixel-Perfect Web Experience</h1>
+                    <img src="../assets/images/ad-web.png" alt="" class="rounded-t-lg" />
+                </div>
+            </div>
+        </main>
+
+        <!--About-->
+        <div class="py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <div class="grid grid-cols-1 justify-between gap-16 md:grid-cols-12">
+                    <div class="md:col-span-6 md:col-start-1">
+                        <p class="mb-4 uppercase tracking-widest">About the Project</p>
+                        <h1 class="mb-4 text-4xl lg:text-6xl">Project Overview</h1>
+                        <p class="mb-8">AnyDone is a productivity platform aiming to deliver seamless user experiences. The project focused on optimizing the platform's website design and code to ensure a responsive, pixel-perfect interface that enhances usability and visual appeal across devices.</p>
+                        <a href="https://demo.ad.sourcetaggers.com/" class="mb-4 inline-flex h-[52px] items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400" target="_blank">View Website* <i class="las la-arrow-right ml-2 -rotate-45 text-3xl"></i></a>
+                        <p>* Backup link represents site at time of this case study. The <a href="https://www.anydone.com/" target="_blank" class="underline">live site</a> is now operated by the client.</p>
+                    </div>
+                    <div class="md:col-span-5 md:col-end-13">
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Industry</p>
+                            <p>SaaS, Productivity</p>
+                        </div>
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Agency</p>
+                            <p>Independent Contractor</p>
+                        </div>
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Year</p>
+                            <p>2023</p>
+                        </div>
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Roles</p>
+                            <div class="flex flex-wrap gap-2">
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">High-Fidelity Wireframing</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Responsive Design Implementation</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Content Guidance</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Developer Handoff</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Pixel-Perfect Grids</p>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Tools</p>
+                            <div class="flex flex-wrap gap-2">
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Figma</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Zeplin</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">HTML, CSS, JavaScript</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">GitHub</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Trello</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Illustrator</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Photoshop</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Slack</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-20">
+                    <h3 class="mb-3 text-2xl lg:text-3xl">Design Process</h3>
+                    <div class="relative mt-20 px-2">
+                        <div class="">
+                            <div class="start flex items-start justify-between">
+                                <div>
+                                    <div class="relative z-10 flex h-10 w-10 flex-col items-center justify-center">
+                                        <div class="mb-4 flex h-full w-full flex-none items-center justify-center rounded-full bg-[#3696e9]/[0.2]"><div class="z-20 h-4 w-4 flex-none rounded-full bg-[#3696e9]"></div></div>
+                                        <div class="uppercase tracking-widest">Discovery</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="relative z-10 flex h-10 w-10 flex-col items-center justify-center">
+                                        <div class="mb-4 flex h-full w-full flex-none items-center justify-center rounded-full bg-[#3696e9]/[0.2]"><div class="z-20 h-4 w-4 flex-none rounded-full bg-[#3696e9]"></div></div>
+                                        <div class="uppercase tracking-widest">Strategy</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="relative z-10 flex h-10 w-10 flex-col items-center justify-center">
+                                        <div class="mb-4 flex h-full w-full flex-none items-center justify-center rounded-full bg-[#3696e9]/[0.2]"><div class="z-20 h-4 w-4 flex-none rounded-full bg-[#3696e9]"></div></div>
+                                        <div class="uppercase tracking-widest">Prototyping</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="relative z-10 flex h-10 w-10 flex-col items-center justify-center">
+                                        <div class="mb-4 flex h-full w-full flex-none items-center justify-center rounded-full bg-[#3696e9]/[0.2]"><div class="z-20 h-4 w-4 flex-none rounded-full bg-[#3696e9]"></div></div>
+                                        <div class="uppercase tracking-widest">Design</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="relative z-10 flex h-10 w-10 flex-col items-center justify-center">
+                                        <div class="mb-4 flex h-full w-full flex-none items-center justify-center rounded-full bg-[#3696e9]/[0.2]"><div class="z-20 h-4 w-4 flex-none rounded-full bg-[#3696e9]"></div></div>
+                                        <div class="uppercase tracking-widest">Development</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="relative z-10 flex h-10 w-10 flex-col items-center justify-center">
+                                        <div class="mb-4 flex h-full w-full flex-none items-center justify-center rounded-full bg-[#3696e9]/[0.2]"><div class="z-20 h-4 w-4 flex-none rounded-full bg-[#3696e9]"></div></div>
+                                        <div class="uppercase tracking-widest">Testing</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="relative z-10 flex h-10 w-10 flex-col items-center justify-center">
+                                        <div class="mb-4 flex h-full w-full flex-none items-center justify-center rounded-full bg-[#3696e9]/[0.2]"><div class="z-20 h-4 w-4 flex-none rounded-full bg-[#3696e9]"></div></div>
+                                        <div class="uppercase tracking-widest">Optimize</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-[30px] right-[30px] top-[-1px]">
+                            <div class="absolute bottom-auto h-0.5 w-full bg-[#3696e9]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Banner 1-->
+        <div class="h-screen bg-[url('../images/insellerate-banner.jpg')] bg-cover bg-scroll bg-center bg-no-repeat md:bg-fixed"></div>
+        <p class="p-4 text-center font-light italic">Trendy angled mockups of Insellerate… but you are gonna learn all about this app in this case study!</p>
+
+        <!--How it started-->
+        <div class="py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">01. Start</p>
+                <h1 class="mb-8 text-4xl lg:text-6xl">Challenges and Approach.</h1>
+                <div class="grid grid-cols-1 justify-between gap-8 md:grid-cols-3">
+                    <div class="md:col-span-1">
+                        <h3 class="mb-3 text-2xl">Maintaining Design Consistency</h3>
+                        <ul class="list-disc space-y-2 pl-5">
+                            <li>Created a cohesive visual language by adhering to AnyDone’s branding guidelines.</li>
+                            <li>Conducted multiple reviews to refine layouts for responsiveness and aesthetic appeal.</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-1">
+                        <h3 class="mb-3 text-2xl">Responsive Design Across Devices</h3>
+                        <ul class="list-disc space-y-2 pl-5">
+                            <li>Addressed scaling issues with adaptive grids and flexible layouts.</li>
+                            <li>Conducted rigorous testing to confirm functionality on desktops, tablets, and mobile devices.</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-1">
+                        <h3 class="mb-3 text-2xl">Efficient Developer Collaboration</h3>
+                        <ul class="list-disc space-y-2 pl-5">
+                            <li>Streamlined handoff processes with annotated wireframes and interactive prototypes.</li>
+                            <li>Used <a href="https://zeplin.io/" target="_blank" class="text-primary underline">Zeplin</a> to provide detailed design specifications and ensured pixel-perfect implementation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Research-->
+        <div class="bg-dark py-16 text-white lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">02. Research</p>
+                <h1 class="mb-4 text-4xl lg:text-6xl">Research & Planning</h1>
+                <p class="mb-12 text-gray">I conducted competitive analysis to benchmark design trends in productivity platforms. I also reviewed user feedback and identified areas for improvement in responsiveness, content structure, and visual hierarchy.</p>
+
+                <div class="mb-10 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Understanding the Client and Market</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-gray">I began by analyzing AnyDone’s objectives, ensuring alignment between the platform’s goals and its target audience's expectations. The focus was to create a responsive and professional interface that reinforced the brand identity.</p>
+                    </div>
+                </div>
+
+                <div class="mb-10 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Analyzing the Competition</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-gray">A thorough competitor analysis helped identify industry standards and trends in productivity platform design. Insights were drawn from leading players in the market, highlighting best practices and areas where AnyDone could differentiate.</p>
+                    </div>
+                </div>
+
+                <div class="mb-10 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Identifying Target Audience</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-gray">Collaborating with stakeholders, I identified AnyDone’s core user demographics: professionals and teams seeking productivity tools. This understanding shaped decisions around content positioning, visual hierarchy, and interaction design.</p>
+                    </div>
+                </div>
+
+                <div class="mb-12 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Gathering User Insights</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-gray">To inform the design, I gathered user feedback through:</p>
+                        <ul class="list-disc space-y-2 pl-5 text-gray">
+                            <li>Surveys and feedback forms provided by existing users.</li>
+                            <li>Heatmaps and analytics to assess user behavior on the website.</li>
+                            <li>Discussions with AnyDone’s support and product teams to identify user pain points.</li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 class="mb-8 text-2xl lg:text-3xl">Key Findings</h3>
+                <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/ad-nav.png" alt="" class="mb-4 rounded-lg" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Navigation Prioritization</h3>
+                        <p class="text-gray">Users needed quick access to key tools, highlighting the importance of intuitive navigation and visible entry points.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/ad-responsive.png" alt="" class="mb-4 rounded-lg" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Responsive Design Demand</h3>
+                        <p class="text-gray">Consistent performance across devices was a top priority, emphasizing the need for pixel-perfect, adaptable layouts.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/ad-text.png" alt="" class="mb-4 rounded-lg" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Visual Hierarchy Enhancement</h3>
+                        <p class="text-gray">Clear content structuring improved readability and engagement, catering to the productivity-focused audience.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/ad-speed.png" alt="" class="mb-4 rounded-lg" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Performance Optimization</h3>
+                        <p class="text-gray">Faster load times and seamless transitions significantly impacted user satisfaction, making optimization essential.</p>
+                    </div>
+                </div>
+
+                <!--<h3 class="mb-8 text-2xl lg:text-3xl">Personas</h3>
+                <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <div class="mb-4 flex items-center space-x-4">
+                            <img src="../assets/images/pp-mike.png" alt="" class="mb-4 w-20 rounded-full md:w-28" />
+                            <div>
+                                <h3 class="mb-1 text-2xl lg:mb-2 lg:text-3xl">Mike, 28</h3>
+                                <p class="text-gray">Mortgage Broker</p>
+                            </div>
+                        </div>
+
+                        <p class="mb-3 text-gray"><span class="font-medium uppercase tracking-wider text-primary">GOALS:</span> Close more deals, manage clients efficiently, access tools on the go.</p>
+                        <p class="mb-3 text-gray"><span class="font-medium uppercase tracking-wider text-primary">FRUSTRATIONS:</span> Trouble accessing Insellerate on mobile, delayed responses, keeping track of clients.</p>
+                        <p class="text-gray"><span class="font-medium uppercase tracking-wider text-primary">NEEDS:</span> Easy mobile access to client info, smooth communication, real-time notifications.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <div class="mb-4 flex items-center space-x-4">
+                            <img src="../assets/images/pp-laura.png" alt="" class="mb-4 w-20 rounded-full md:w-28" />
+                            <div>
+                                <h3 class="mb-1 text-2xl lg:mb-2 lg:text-3xl">Laura, 32</h3>
+                                <p class="text-gray">Loan Officer</p>
+                            </div>
+                        </div>
+
+                        <p class="mb-3 text-gray"><span class="font-medium uppercase tracking-wider text-primary">GOALS:</span> Manage leads effectively, improve client satisfaction, work remotely.</p>
+                        <p class="mb-3 text-gray"><span class="font-medium uppercase tracking-wider text-primary">FRUSTRATIONS:</span> Limited mobile access to Insellerate, task prioritization, communication issues.</p>
+                        <p class="text-gray"><span class="font-medium uppercase tracking-wider text-primary">NEEDS:</span> Mobile app with CRM features, user-friendly interface, seamless integration.</p>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+
+        <div class="py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">03. Strategy & Planning</p>
+                <h1 class="mb-4 text-4xl lg:text-6xl">Information Architecture</h1>
+                <p class="mb-4">The sitemap process was pretty straightforward. I’ve started thinking of the home as the main container for almost all my features. Then I’ve defined the primary and secondary navigation.</p>
+
+                <img src="../assets/images/ad-sitemap.png" class="w-full" alt="" />
+
+                <h1 class="mb-4 mt-20 text-4xl lg:text-6xl">Task Flow</h1>
+                <p class="mb-4">At this point, I’ve identified a task I’ve then tested during usability tests phase:</p>
+                <ul class="mb-3 list-disc space-y-2 pl-5">
+                    <li>Create a new user</li>
+                </ul>
+                <p>I designed the flow to guide users step-by-step, ensuring a smooth and intuitive experience.</p>
+
+                <img src="../assets/images/ad-legend.png" class="mx-auto mt-8 max-w-xl" alt="" />
+
+                <h3 class="mb-4 mt-12 text-2xl lg:text-3xl">Create a new user</h3>
+                <img src="../assets/images/ad-flow.png" alt="" />
+            </div>
+        </div>
+
+        <div class="mx-auto max-w-7xl border-t border-zinc-200 px-4"></div>
+
+        <div class="pt-16 lg:pt-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">04. Design & Development</p>
+
+                <div class="mb-10 grid grid-cols-1 items-center justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-6">
+                        <h1 class="mb-4 text-4xl lg:text-6xl">Assessment & Planning</h1>
+                        <p>Analyzed the existing design to identify gaps, including the lack of responsiveness and grid structure. Developed a strategic plan to implement a 12-column Bootstrap grid system for a structured, responsive layout. Adapted the high-fidelity design in Figma, ensuring alignment with the new framework while preserving visual consistency.</p>
+                    </div>
+                    <div class="md:col-span-5 md:col-start-8">
+                        <img src="../assets/images/ad-grids.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="mb-10 grid grid-cols-1 items-center justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-5">
+                        <video width="100%" muted loop autoplay>
+                            <source src="../assets/images/ad-prototype.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="md:col-span-6 md:col-start-7">
+                        <h1 class="mb-4 text-4xl lg:text-6xl">Prototyping</h1>
+                        <p>Built responsive prototypes in Figma, demonstrating how the updated design would behave across devices. This step allowed stakeholders to review and provide feedback on the improved layouts.</p>
+                    </div>
+                </div>
+
+                <div class="mb-10 grid grid-cols-1 items-center justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-6">
+                        <h1 class="mb-4 text-4xl lg:text-6xl">Development</h1>
+                        <p>Translated the designs into responsive code using HTML, CSS, and JavaScript within the Bootstrap framework, ensuring technical accuracy and seamless implementation.</p>
+                    </div>
+                    <div class="md:col-span-5 md:col-start-8">
+                        <img src="../assets/images/ad-coding.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="mb-10 grid grid-cols-1 items-center justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-5">
+                        <video width="100%" muted loop autoplay>
+                            <source src="../assets/images/responsive-video.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="md:col-span-6 md:col-start-7">
+                        <h1 class="mb-4 text-4xl lg:text-6xl">Validation</h1>
+                        <p>Conducted cross-device and cross-browser testing to confirm the website’s responsiveness and consistency. Adjustments were made based on usability tests to deliver an optimal experience for all users.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="mx-auto max-w-7xl px-4"><hr /></div> -->
+        <div class="py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <h1 class="mb-16 text-4xl lg:text-6xl">Global Design System</h1>
+                <div class="grid grid-cols-1 justify-between gap-16 md:grid-cols-12">
+                    <div class="md:col-span-8">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Typography</h3>
+                        <img src="../assets/images/ad-typography.svg" alt="" class="w-full" />
+                    </div>
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Color palette</h3>
+                        <div class="mb-4 rounded bg-[#00BCF1] p-5 text-xl tracking-widest text-white">#00BCF1</div>
+                        <div class="mb-4 rounded bg-[#008ABE] p-5 text-xl tracking-widest text-white">#008ABE</div>
+                        <div class="mb-4 rounded bg-[#eef4ff] p-5 text-xl tracking-widest text-dark">#eef4ff</div>
+                        <div class="mb-4 rounded bg-[#212529] p-5 text-xl tracking-widest text-white">#212529</div>
+                        <div class="mb-4 rounded border bg-[#FFFFFF] p-5 text-xl tracking-widest text-dark">#FFFFFF</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#DEE7EE] py-16 lg:py-32">
+            <div class="mx-auto max-w-5xl px-4 text-center">
+                <h1 class="mb-4 text-4xl lg:text-6xl">Visual Design</h1>
+                <p class="mb-12 text-gray">The visual design phase focused on ensuring a responsive and visually appealing interface. By adhering to a 12-column grid system, I optimized layouts for consistent alignment and scalability across all devices. The design maintained a clean aesthetic, balancing typography, colors, and visual hierarchy to create an engaging and user-friendly experience.</p>
+            </div>
+            <div class="mb-16 px-[10%] text-center">
+                <img src="../assets/images/ad-responsive-devices.png" class="w-full" alt="" />
+
+                <a href="http://demo.patientmatic.dentist.sourcetaggers.com/" class="mt-8 inline-flex h-[52px] items-center rounded-full bg-[#4285F4] px-8 py-2 uppercase tracking-widest text-white hover:bg-[#5893F5]" target="_blank">View Website <i class="las la-arrow-right ml-2 -rotate-45 text-3xl"></i></a>
+            </div>
+            <!--Screenshots-->
+
+            <div class="mt-8 lg:mt-16">
+                <div class="glide screenshots-slider">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <img src="../assets/images/ad-screen-01.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/ad-screen-02.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/ad-screen-03.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/ad-screen-04.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/ad-screen-05.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/ad-screen-06.png" alt="" />
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img src="../assets/images/arrow-prev.svg" alt="" /></button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="../assets/images/arrow-prev.svg" alt="" class="arrow-next" /></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Conclusion-->
+        <div class="bg-dark py-16 text-white lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">05. Conclusion</p>
+                <h1 class="mb-4 text-4xl lg:text-6xl">Key Learnings</h1>
+                <p class="mb-12 text-gray">My journey through this project provided several key insights.</p>
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-grid.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Importance of Grid Systems</h3>
+                        <p class="text-gray">Leveraging a 12-column Bootstrap grid system ensures consistency and adaptability in responsive designs, enabling seamless experiences across devices.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-mobile.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Responsive Design Challenges</h3>
+                        <p class="text-gray">Transforming existing high-fidelity designs into responsive layouts highlighted the need for flexibility and foresight in the initial design stages.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-chat.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Collaboration and Handoff</h3>
+                        <p class="text-gray">Effective communication and structured handoffs between design and development are essential for preserving design integrity during implementation.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-repeat.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Iterative Improvement</h3>
+                        <p class="text-gray">Continuous testing and refinement are critical for identifying and resolving usability issues, ensuring a polished and functional end product.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Banner 2-->
+        <!-- <div class="h-screen bg-[url('../images/amooma-banner2.png')] bg-cover bg-fixed bg-center bg-no-repeat"></div> -->
+        <!--Suggestions-->
+        <div class="bg-primary">
+            <div class="rounded-b-3xl bg-white py-16 lg:rounded-b-[80px] lg:py-32">
+                <div class="mx-auto max-w-7xl px-4">
+                    <h1 class="mb-8 text-center text-4xl md:text-left lg:text-6xl">More to explore</h1>
+                    <div class="grid grid-cols-1 justify-between gap-x-8 gap-y-8 md:grid-cols-2">
+                        <div class="flex items-center justify-end gap-x-5 lg:gap-x-8">
+                            <a href="patientmatic"><img src="../assets/images/patientmatci-web.png" alt="" class="h-36 max-w-fit rounded-md duration-300 ease-in-out hover:scale-110" /></a>
+                            <div>
+                                <a href="patientmatic" class="mb-2 inline-flex items-center rounded-full text-sm uppercase tracking-widest text-dark hover:text-primary"><i class="las la-arrow-right mr-2 rotate-[135deg] text-xl md:text-xl"></i> Previous </a>
+                                <a href="patientmatic" class="hover:text-primary"><h3 class="mb-1 text-2xl md:text-xl">Patientmatic — Driving Practice Growth with Instant Online Presence and Seamless Patient Booking</h3></a>
+                                <a href="patientmatic" class="uppercase hover:text-primary"
+                                    ><p class="mb-4 flex items-center font-light uppercase tracking-widest">
+                                        SaaS, Mortgage CRM <span class="ml-4 border-l pl-4"><img src="../assets/images/flag-USA.avif" alt="" class="h-6" /></span></p
+                                ></a>
+                            </div>
+                        </div>
+
+                        <div class="text-right">
+                            <div class="flex items-center justify-end gap-x-5 lg:gap-x-8">
+                                <div>
+                                    <a href="aja-dynasty" class="mb-2 inline-flex items-center rounded-full uppercase tracking-widest text-dark hover:text-primary">Next Up <i class="las la-arrow-right ml-2 -rotate-45 text-xl md:text-3xl"></i></a>
+                                    <a href="aja-dynasty" class="hover:text-primary"><h3 class="mb-1 text-2xl md:text-xl">Redefining B2C Shopping for Aja Dynasty: A User-Centric Approach to Seamless E-commerce Design</h3></a>
+                                    <a href="aja-dynasty" class="uppercase hover:text-primary"
+                                        ><p class="mb-4 flex items-center justify-end font-light uppercase tracking-widest">
+                                            B2C, E-Commerce <span class="ml-4 border-l pl-4"><img src="../assets/images/nepal-flag.svg" alt="" class="h-6" /></span></p
+                                    ></a>
+                                </div>
+                                <a href="aja-dynasty"><img src="../assets/images/aja-web.png" alt="" class="h-36 max-w-fit rounded-md duration-300 ease-in-out hover:scale-110" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer-->
+        <footer class="bg-primary px-4 pb-8 pt-16 lg:pt-32">
+            <div class="mx-auto max-w-7xl text-center">
+                <p class="mb-4 uppercase tracking-widest">Need A Designer?</p>
+                <h1 class="mb-4 text-center text-3xl lg:text-6xl">Let's make something together</h1>
+                <p class="mx-auto max-w-3xl text-lg font-light lg:text-2xl">I help businesses, organizations and individuals from around the world bring their projects to life. I would love to help you too.</p>
+                <a href="../contact" class="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-100">Start a project <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                <!--Social Icons-->
+                <ul class="mt-10 flex justify-center space-x-4">
+                    <li>
+                        <a href="https://dribbble.com/milanmdhr" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-dribbble"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/milanmdhr/" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/uxmilan/" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:milanmdhr@gmail.com" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark"><i class="las la-envelope"></i></a>
+                    </li>
+                </ul>
+                <p class="mb-2 mt-10 text-sm text-green-900">&copy; 2024 All rights reserved.</p>
+                <p></p>
+                <p class="text-sm text-green-800">Designed & Coded with <i class="las la-heart animate-heart-beat text-red-600 opacity-100"></i> by Milan Manandhar</p>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <script>
+            new Glide('.glide', {
+                type: 'carousel',
+                perView: 4,
+                autoplay: 3000,
+                gap: 32,
+                startAt: 2,
+                focusAt: 'center',
+                breakpoints: {
+                    1280: {
+                        perView: 3,
+                        gap: 32,
+                        peek: {
+                            before: 60,
+                            after: 60,
+                        },
+                    },
+                    1024: {
+                        perView: 2,
+                        gap: 20,
+                    },
+                    768: {
+                        perView: 1,
+                        gap: 10,
+                        peek: {
+                            before: 30,
+                            after: 30,
+                        },
+                    },
+                },
+            }).mount()
+        </script>
+
+        <script>
+            let scrollpos = window.scrollY
+            const header = document.querySelector('nav')
+            const header_height = header.offsetHeight
+
+            const add_class_on_scroll = () => header.classList.add('fade-in', 'backdrop-blur')
+            const remove_class_on_scroll = () => header.classList.remove('fade-in', 'backdrop-blur')
+
+            window.addEventListener('scroll', function () {
+                scrollpos = window.scrollY
+
+                if (scrollpos >= header_height) {
+                    add_class_on_scroll()
+                } else {
+                    remove_class_on_scroll()
+                }
+            })
+        </script>
+
+        <script>
+            let mobscrollpos = window.scrollY
+            const mobheader = document.querySelector('header')
+            const mobheader_height = mobheader.offsetHeight
+
+            const mob_add_class_on_scroll = () => mobheader.classList.add('bg-dark')
+            const mob_remove_class_on_scroll = () => mobheader.classList.remove('bg-dark')
+
+            window.addEventListener('scroll', function () {
+                mobscrollpos = window.scrollY
+
+                if (mobscrollpos >= mobheader_height) {
+                    mob_add_class_on_scroll()
+                } else {
+                    mob_remove_class_on_scroll()
+                }
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Milan Manandhar - Patientmatic</title>
+        <link rel="shortcut icon" href="../assets/images/favicon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" integrity="sha512-tYKqO78H3mRRCHa75fms1gBvGlANz0JxjN6fVrMBvWL+vOOy200npwJ69OBl9XEsTu3yVUvZNrdWFIIrIf8FLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css" integrity="sha512-wCwx+DYp8LDIaTem/rpXubV/C1WiNRsEVqoztV0NZm8tiTvsUeSlA/Uz02VTGSiqfzAHD4RnqVoevMcRZgYEcQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXPJQHYWHZ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+                dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
+
+            gtag('config', 'G-ZXPJQHYWHZ')
+        </script>
+    </head>
+
+    <body x-data="{ navbarOpen: false, scrolledFromTop:false }" :class="{'overflow-hidden': navbarOpen, 'overflow-auto': !navbarOpen }" class="lg:overflow-auto">
+        <!--Navigation-->
+        <nav class="fixed z-50 hidden w-full bg-transparent py-6 transition-all duration-300 ease-in-out lg:block">
+            <div class="mx-auto max-w-7xl px-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex flex-shrink-0 items-center">
+                        <a href="/"> <img class="h-10 w-auto" src="../assets/images/logo.svg" alt="Milan Manandhar" /></a>
+                    </div>
+                    <div class="ml-6">
+                        <div class="flex space-x-4 text-white">
+                            <a href="../work" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Work</a>
+                            <a href="../about" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">About</a>
+                            <a href="../#services" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Services</a>
+                            <a href="https://medium.com/@milanmdhr" target="_blank" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Blog</a>
+                            <a href="../contact" class="px-3 py-2 text-base font-light uppercase tracking-widest hover:text-primary">Let's Talk</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="../contact" class="inline-flex items-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <header class="mobnav fixed z-50 block w-full lg:hidden">
+            <div class="flex items-center justify-between p-4">
+                <div>
+                    <a href="/"> <img class="h-10 w-auto" src="../assets/images/logo.svg" alt="Milan Manandhar" /></a>
+                </div>
+                <button @click="navbarOpen = !navbarOpen" class="relative h-4 w-6" id="navButton" aria-label="Nav Button">
+                    <div class="absolute top-1/2 h-0.5 w-full -translate-y-1/2 bg-white transition duration-300 before:absolute before:-top-2 before:left-0 before:h-0.5 before:w-full before:bg-white before:transition-all before:duration-300 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-white after:transition-all after:duration-300" :class="{'rotate-45 before:opacity-0 before:top-0 after:-rotate-90 after:!bottom-0' : navbarOpen}"></div>
+                </button>
+            </div>
+            <div class="absolute left-0 right-0 top-full z-40 flex h-screen w-full translate-x-full transform flex-col justify-between overflow-y-auto bg-dark pb-[72px] transition duration-200" :class="{'translate-x-full': !navbarOpen, 'translate-x-0': navbarOpen}">
+                <ul class="px-8 pt-[20%]">
+                    <div class="flex flex-col space-y-4 text-center text-white">
+                        <a href="../work" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Work</a>
+                        <a href="../about" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">About</a>
+                        <a href="/#services" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Services</a>
+                        <a href="https://medium.com/@milanmdhr" target="_blank" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Blog</a>
+                        <a href="../contact" class="px-3 py-2 text-2xl font-light uppercase tracking-widest hover:text-primary">Let's Talk</a>
+                    </div>
+                </ul>
+                <div class="p-8">
+                    <a href="../contact" class="flex items-center justify-center rounded-full bg-primary px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-400">Hire Me <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!--Main Content-->
+        <main>
+            <!--Hero-->
+            <div class="home-hero relative rounded-b-3xl bg-[#3A52E4] bg-center bg-no-repeat px-4 pt-32 lg:rounded-b-[80px]">
+                <!--Caption-->
+                <div class="caption mx-auto flex h-full max-w-7xl flex-col items-center justify-center pt-20 text-center text-white">
+                    <p class="mb-4 flex items-center justify-end font-light uppercase tracking-widest">
+                        SaaS, Healthcare <span class="ml-4 border-l pl-4"><img src="../assets/images/flag-USA.avif" alt="" class="h-6" /></span>
+                    </p>
+                    <h1 class="mx-auto mb-16 max-w-5xl text-center text-3xl font-bold !leading-snug md:text-5xl xl:text-5xl">Patientmatic - Driving Practice Growth with Instant Online Presence and Seamless Patient Booking</h1>
+                    <img src="../assets/images/patientmatci-web.png" alt="" class="rounded-t-lg" />
+                </div>
+            </div>
+        </main>
+
+        <!--About-->
+        <div class="py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <div class="grid grid-cols-1 justify-between gap-16 md:grid-cols-12">
+                    <div class="md:col-span-6 md:col-start-1">
+                        <p class="mb-4 uppercase tracking-widest">About the Project</p>
+                        <h1 class="mb-4 text-4xl lg:text-6xl">Project Background</h1>
+                        <p class="mb-4">Patientmatic is a platform that simplifies patient management for dental practices, focusing on appointment scheduling, data management, and communication. The user-friendly interface improves accessibility and clinic operations, enhancing patient engagement and satisfaction. The design aimed to provide a seamless experience for both providers and patients.</p>
+                        <a href="http://demo.patientmatic.dentist.sourcetaggers.com/" class="mt-6 inline-flex h-[52px] items-center rounded-full bg-[#4285F4] px-8 py-2 uppercase tracking-widest text-white hover:bg-[#5893F5]" target="_blank">View Demo <i class="las la-arrow-right ml-2 -rotate-45 text-3xl"></i></a>
+                    </div>
+                    <div class="md:col-span-5 md:col-end-13">
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Industry</p>
+                            <p>SaaS, Healthcare (Dental Practices)</p>
+                        </div>
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Agency</p>
+                            <p>Clickagee</p>
+                        </div>
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Year</p>
+                            <p>2019</p>
+                        </div>
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Roles</p>
+                            <div class="flex flex-wrap gap-2">
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Research & Discovery</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Wireframing</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Prototyping</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">UI/UX Design</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Interaction & Visual Design</p>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <p class="mb-4 uppercase tracking-widest">Tools</p>
+                            <div class="flex flex-wrap gap-2">
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Adobe XD</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Trello</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Adobe CC</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Illustrator</p>
+                                <p class="inline-block w-auto rounded-full border border-dark px-4 py-1">Photoshop</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-20">
+                    <h3 class="mb-3 text-2xl lg:text-3xl">Design Process</h3>
+                    <div class="relative mt-20 px-2">
+                        <div class="">
+                            <div class="start flex items-start justify-between">
+                                <div>
+                                    <div class="relative z-10 flex h-10 w-10 flex-col items-center justify-center">
+                                        <div class="mb-4 flex h-full w-full flex-none items-center justify-center rounded-full bg-[#4285F4]/[0.2]"><div class="z-20 h-4 w-4 flex-none rounded-full bg-[#4285F4]"></div></div>
+                                        <div class="uppercase tracking-widest">Research</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="relative z-10 flex h-10 w-10 flex-col items-center justify-center">
+                                        <div class="mb-4 flex h-full w-full flex-none items-center justify-center rounded-full bg-[#4285F4]/[0.2]"><div class="z-20 h-4 w-4 flex-none rounded-full bg-[#4285F4]"></div></div>
+                                        <div class="uppercase tracking-widest">Plan</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="relative z-10 flex h-10 w-10 flex-col items-center justify-center">
+                                        <div class="mb-4 flex h-full w-full flex-none items-center justify-center rounded-full bg-[#4285F4]/[0.2]"><div class="z-20 h-4 w-4 flex-none rounded-full bg-[#4285F4]"></div></div>
+                                        <div class="uppercase tracking-widest">Design</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="relative z-10 flex h-10 w-10 flex-col items-center justify-center">
+                                        <div class="mb-4 flex h-full w-full flex-none items-center justify-center rounded-full bg-[#4285F4]/[0.2]"><div class="z-20 h-4 w-4 flex-none rounded-full bg-[#4285F4]"></div></div>
+                                        <div class="uppercase tracking-widest">Prototype</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="relative z-10 flex h-10 w-10 flex-col items-center justify-center">
+                                        <div class="mb-4 flex h-full w-full flex-none items-center justify-center rounded-full bg-[#4285F4]/[0.2]"><div class="z-20 h-4 w-4 flex-none rounded-full bg-[#4285F4]"></div></div>
+                                        <div class="uppercase tracking-widest">Test</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="relative z-10 flex h-10 w-10 flex-col items-center justify-center">
+                                        <div class="mb-4 flex h-full w-full flex-none items-center justify-center rounded-full bg-[#4285F4]/[0.2]"><div class="z-20 h-4 w-4 flex-none rounded-full bg-[#4285F4]"></div></div>
+                                        <div class="uppercase tracking-widest">Launch</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="relative z-10 flex h-10 w-10 flex-col items-center justify-center">
+                                        <div class="mb-4 flex h-full w-full flex-none items-center justify-center rounded-full bg-[#4285F4]/[0.2]"><div class="z-20 h-4 w-4 flex-none rounded-full bg-[#4285F4]"></div></div>
+                                        <div class="uppercase tracking-widest">Optimize</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-[30px] right-[30px] top-[-1px]">
+                            <div class="absolute bottom-auto h-0.5 w-full bg-[#4285F4]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Banner 1-->
+        <div class="h-screen bg-[url('../images/patientmatic-banner.png')] bg-cover bg-scroll bg-center bg-no-repeat md:bg-fixed"></div>
+        <p class="p-4 text-center font-light italic">Streamlined and intuitive screens designed for seamless patient and dental clinic management.</p>
+
+        <!--How it started-->
+        <div class="py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">01. Start</p>
+                <h1 class="text-4xl lg:text-6xl">How it started.</h1>
+                <p class="mb-8">The project aimed to improve patient management in dental practices, which often struggle with appointment scheduling, data tracking, and communication. Patientmatic was developed as a comprehensive platform to streamline these processes through a single interface. My involvement began with understanding user needs and identifying the best design solutions to enhance the overall user experience.</p>
+                <div class="grid grid-cols-1 justify-between gap-16 md:grid-cols-2">
+                    <div class="md:col-span-1">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">The Problem</h3>
+                        <ul class="list-disc space-y-2 pl-5">
+                            <li>Dental offices struggled with fragmented systems leading to inefficiencies.</li>
+                            <li>Issues included missed appointments, difficulty tracking patient records, and poor communication.</li>
+                            <li>Existing systems were not optimized for user experience, causing frustration for dental professionals.</li>
+                            <li>Patients faced challenges scheduling appointments, communicating with clinics, and accessing medical info online.</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-1">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">The Solution</h3>
+                        <ul class="list-disc space-y-2 pl-5">
+                            <li>The platform needed a simplified design for both patients and dental professionals.</li>
+                            <li>Research identified key features for a streamlined user experience: appointment scheduling, patient management, and communication tools.</li>
+                            <li>Designed a user-friendly interface for easy patient data and appointment management.</li>
+                            <li>Created an intuitive online interaction system for patients to engage with the clinic.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto max-w-7xl border-t border-zinc-200 px-4"></div>
+        <!--Research-->
+        <div class="bg-white py-16 text-dark lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">02. Research</p>
+                <h1 class="mb-4 text-4xl lg:text-6xl">Research & Discovery</h1>
+                <p class="mb-12">The research phase was crucial in ensuring the success of the Insellerate mobile app. It involved understanding the client’s needs, the market landscape, and the users' requirements. This phase provided the foundation for informed design decisions, ensuring that the final product met user expectations and business goals.</p>
+
+                <div class="mb-10 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Understanding the Client and Market</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="">The primary client for this platform was dental practices looking to modernize their operations. The market required a product that could handle both administrative and patient-facing tasks with ease.</p>
+                    </div>
+                </div>
+
+                <div class="mb-10 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Who are the users?</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="mb-4">There are 3 predefined users.</p>
+                        <img src="../assets/images/pm-users.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="mb-10 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Analyzing the Competition</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="mb-4">I conducted a competitor analysis of other healthcare management platforms to identify best practices and areas for improvement, focusing on intuitive interfaces, ease of use, and mobile responsiveness.</p>
+                        <img src="../assets/images/pm-competition.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="mb-10 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Identifying Target Audience</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <ul class="list-disc space-y-2 pl-5">
+                            <li><strong class="text-dark">Dental Professionals:</strong> Users responsible for managing appointments, patient data, and financial transactions.</li>
+
+                            <li><strong class="text-dark">Patients:</strong> Those seeking a user-friendly system to schedule and manage appointments online.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mb-12 grid grid-cols-1 justify-between gap-2 md:grid-cols-12 md:gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Gathering User Insights</h3>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p>Through user research and interviews with dental professionals, I identified key pain points like complicated workflows and inefficient data entry systems. I used this feedback to refine the platform’s design.</p>
+                    </div>
+                </div>
+                <h3 class="mb-8 text-2xl lg:text-3xl">Key Findings</h3>
+                <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div class="rounded-xl border border-zinc-200 p-5 md:p-8">
+                        <img src="../assets/images/pm-frag.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Fragmented Systems</h3>
+                        <p class="">Dental clinics struggled with disjointed systems, leading to inefficiencies in scheduling, patient data management, and communication.</p>
+                    </div>
+
+                    <div class="rounded-xl border border-zinc-200 p-5 md:p-8">
+                        <img src="../assets/images/icon-complex.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Complex Workflows</h3>
+                        <p class="">Existing platforms lacked user-friendly interfaces, making it challenging for dental professionals to manage tasks effectively.</p>
+                    </div>
+
+                    <div class="rounded-xl border border-zinc-200 p-5 md:p-8">
+                        <img src="../assets/images/icon-patient.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Patient Accessibility Issues</h3>
+                        <p class="">Patients faced difficulties in scheduling appointments and accessing medical information due to non-intuitive designs.</p>
+                    </div>
+
+                    <div class="rounded-xl border border-zinc-200 p-5 md:p-8">
+                        <img src="../assets/images/icon-platform.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Need for a Unified Platform</h3>
+                        <p class="">Research highlighted the demand for a comprehensive solution combining appointment scheduling, communication, and data management.</p>
+                    </div>
+                </div>
+
+                <h3 class="mb-8 text-2xl lg:text-3xl">Personas</h3>
+                <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div class="rounded-xl border border-zinc-200 p-5 md:p-8">
+                        <div class="mb-4 flex items-center space-x-4">
+                            <img src="../assets/images/dr.png" alt="" class="mb-4 w-20 rounded-full md:w-28" />
+                            <div>
+                                <h3 class="mb-1 text-2xl lg:mb-2 lg:text-3xl">Dr. Emily Carter, 45</h3>
+                                <p class="">Dentist & Clinic Owner</p>
+                            </div>
+                        </div>
+
+                        <p class="mb-3"><span class="font-medium uppercase tracking-wider text-[#4285F4]">GOALS:</span> Streamline patient scheduling, improve clinic efficiency, and ensure high-quality patient care.</p>
+                        <p class="mb-3"><span class="font-medium uppercase tracking-wider text-[#4285F4]">FRUSTRATIONS:</span> Inefficient appointment systems, difficulty tracking patient history, and limited time for patient engagement.</p>
+                        <p class=""><span class="font-medium uppercase tracking-wider text-[#4285F4]">NEEDS:</span> A user-friendly system to manage appointments, track patient data, and simplify day-to-day operations.</p>
+                    </div>
+
+                    <div class="rounded-xl border border-zinc-200 p-5 md:p-8">
+                        <div class="mb-4 flex items-center space-x-4">
+                            <img src="../assets/images/sarah-02.png" alt="" class="mb-4 w-20 rounded-full md:w-28" />
+                            <div>
+                                <h3 class="mb-1 text-2xl lg:mb-2 lg:text-3xl">Sarah Thompson, 34</h3>
+                                <p class="">Patient & Working Professional</p>
+                            </div>
+                        </div>
+
+                        <p class="mb-3"><span class="font-medium uppercase tracking-wider text-[#4285F4]">GOALS:</span> Schedule dental appointments easily, receive timely reminders, and access medical records online.</p>
+                        <p class="mb-3"><span class="font-medium uppercase tracking-wider text-[#4285F4]">FRUSTRATIONS:</span> Long waiting times, difficulty booking appointments, and unclear communication from clinics.</p>
+                        <p class=""><span class="font-medium uppercase tracking-wider text-[#4285F4]">NEEDS:</span> A seamless platform for scheduling, receiving updates, and communicating with the clinic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mx-auto max-w-7xl border-t border-zinc-200 px-4"></div>
+
+        <div class="py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">03. Strategy & Planning</p>
+                <h1 class="mb-4 text-4xl lg:text-6xl">Information Architecture</h1>
+                <p class="mb-4">The sitemap process was pretty straightforward. I’ve started thinking of the dashboard as the main container for almost all my features. Then I’ve defined the primary and secondary navigation.</p>
+
+                <img src="../assets/images/patientmatic-sitemap.png" class="w-full" alt="" />
+
+                <h1 class="mb-4 mt-20 text-4xl lg:text-6xl">Task Flow</h1>
+                <p class="mb-4">At this point, I’ve identified the two tasks I’ve then tested during usability tests phase:</p>
+                <ul class="mb-3 list-disc space-y-2 pl-5">
+                    <li>Create a new site</li>
+                    <li>Add a new page</li>
+                </ul>
+                <p>Designing the task flows for adding a new profile and creating a new site in Patientmatic involved simplifying user interactions. For profiles, I focused on clear, error-free data entry, while site creation balanced customization with ease of use. Both flows were designed to guide users step-by-step, ensuring a smooth, intuitive experience without overwhelming them with too many choices.</p>
+
+                <img src="../assets/images/pm-legend.png" class="mx-auto mt-8 max-w-xl" alt="" />
+
+                <h3 class="mb-4 mt-12 text-2xl lg:text-3xl">Create a new site</h3>
+                <img src="../assets/images/pm-task-newsite.png" alt="" />
+
+                <h3 class="mb-4 mt-12 text-2xl lg:text-3xl">Add a new page</h3>
+                <img src="../assets/images/pm-task-page.png" alt="" />
+            </div>
+        </div>
+
+        <div class="mx-auto max-w-7xl border-t border-zinc-200 px-4"></div>
+
+        <div class="pt-16 lg:pt-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">04. Design Process</p>
+                <h1 class="mb-4 text-4xl lg:text-6xl">Wireframes & Prototypes</h1>
+                <p class="mb-12">I developed wireframes that outlined the platform’s core features, focusing on user-friendly navigation and visual hierarchy. Interactive prototypes were created to test the flow of appointment scheduling and patient communication, ensuring they were intuitive.</p>
+
+                <h3 class="mb-3 text-2xl lg:text-3xl">Hand-Sketched Wireframes</h3>
+                <p class="mb-4">In the early stages of designing Patientmatic, I created hand-sketched wireframes to outline the platform's core functionalities and user flows. These sketches served as a quick and flexible way to visualize layout ideas, prioritize key features, and ensure alignment with user needs. They helped identify potential design challenges early on, setting a strong foundation for further refinement in digital wireframes and prototypes. This approach streamlined collaboration and provided a clear starting point for the platform’s development.</p>
+                <img src="../assets/images/pm-handsketch.png" alt="" />
+                <h3 class="mb-3 pt-16 text-2xl lg:text-3xl">Low Fidelity Wireframes</h3>
+                <p class="mb-4">After analyzing the hand-sketched wireframes, I created low-fidelity digital wireframes to refine functionality and navigation, enabling rapid iteration and aligning the structure with user needs before moving to higher fidelity designs.</p>
+            </div>
+        </div>
+
+        <img src="../assets/images/pm-wireframes.png" alt="" class="w-full" />
+
+        <!-- <div class="mx-auto max-w-7xl px-4"><hr /></div> -->
+        <div class="py-16 lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <h1 class="mb-16 text-4xl lg:text-6xl">Global Design System</h1>
+                <div class="grid grid-cols-1 justify-between gap-16 md:grid-cols-12">
+                    <div class="md:col-span-8">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Typography</h3>
+                        <img src="../assets/images/pm-font.svg" alt="" class="w-full" />
+                    </div>
+                    <div class="md:col-span-4">
+                        <h3 class="mb-3 text-2xl lg:text-3xl">Color palette</h3>
+                        <div class="mb-4 rounded bg-[#4285F4] p-5 text-xl tracking-widest text-white">#4285F4</div>
+                        <div class="mb-4 rounded bg-[#6A9FF6] p-5 text-xl tracking-widest text-white">#6A9FF6</div>
+                        <div class="mb-4 rounded bg-[#F5F5F5] p-5 text-xl tracking-widest text-dark">#F5F5F5</div>
+                        <div class="mb-4 rounded bg-[#333333] p-5 text-xl tracking-widest text-white">#333333</div>
+                        <div class="mb-4 rounded border bg-[#FFFFFF] p-5 text-xl tracking-widest text-dark">#FFFFFF</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#DEE7EE] py-16 lg:py-32">
+            <div class="mx-auto max-w-5xl px-4 text-center">
+                <h1 class="mb-4 text-4xl lg:text-6xl">Visual Design</h1>
+                <p class="mb-3 text-gray">The visual design for Patientmatic focused on creating a clean, intuitive interface tailored to the needs of dental professionals and patients. By using a balanced color palette, clear typography, and visually distinct elements, the design enhanced readability and accessibility across the platform.</p>
+                <p class="mb-12 text-gray">Icons and subtle animations were incorporated to guide users through tasks seamlessly, while maintaining a professional and welcoming aesthetic. The visual hierarchy was carefully crafted to emphasize essential features, ensuring a cohesive and engaging user experience.</p>
+            </div>
+            <div class="mb-16 px-[10%] text-center">
+                <img src="../assets/images/pm-responsive.png" class="w-full" alt="" />
+
+                <a href="http://demo.patientmatic.dentist.sourcetaggers.com/" class="mt-8 inline-flex h-[52px] items-center rounded-full bg-[#4285F4] px-8 py-2 uppercase tracking-widest text-white hover:bg-[#5893F5]" target="_blank">View Demo <i class="las la-arrow-right ml-2 -rotate-45 text-3xl"></i></a>
+            </div>
+            <!--Screenshots-->
+
+            <div class="mt-8 lg:mt-16">
+                <div class="glide screenshots-slider">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <img src="../assets/images/pm-01.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/pm-02.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/pm-03.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/pm-04.png" alt="" />
+                            </li>
+                            <li class="glide__slide">
+                                <img src="../assets/images/pm-05.png" alt="" />
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img src="../assets/images/arrow-prev.svg" alt="" /></button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="../assets/images/arrow-prev.svg" alt="" class="arrow-next" /></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Conclusion-->
+        <div class="bg-dark py-16 text-white lg:py-32">
+            <div class="mx-auto max-w-7xl px-4">
+                <p class="mb-4 uppercase tracking-widest">05. Conclusion</p>
+                <h1 class="mb-4 text-4xl lg:text-6xl">Key Learnings</h1>
+                <p class="mb-12 text-gray">My journey through this project provided several key insights.</p>
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-user.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Understanding User Needs</h3>
+                        <p class="text-gray">Recognizing the importance of understanding dental professionals' workflows and patient expectations to create a solution that bridges operational gaps.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-star.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Streamlining Experiences</h3>
+                        <p class="text-gray">Designing simplified and intuitive user flows for complex processes, such as appointment scheduling and patient data management.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-eye.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Consistent Visual Design</h3>
+                        <p class="text-gray">Maintaining a cohesive visual identity across the platform to enhance usability, align with the brand, and improve user trust.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-black p-5 md:p-8">
+                        <img src="../assets/images/icon-message.svg" alt="" class="mb-4 w-10" />
+                        <h3 class="mb-2 text-2xl lg:text-3xl">Feedback and Iteration</h3>
+                        <p class="text-gray">Incorporating user feedback at every stage, ensuring the platform effectively addressed pain points and evolved with user needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Banner 2-->
+        <!-- <div class="h-screen bg-[url('../images/amooma-banner2.png')] bg-cover bg-fixed bg-center bg-no-repeat"></div> -->
+
+        <!--Suggestions-->
+        <div class="bg-primary">
+            <div class="rounded-b-3xl bg-white py-16 lg:rounded-b-[80px] lg:py-32">
+                <div class="mx-auto max-w-7xl px-4">
+                    <h1 class="mb-8 text-center text-4xl md:text-left lg:text-6xl">More to explore</h1>
+                    <div class="grid grid-cols-1 justify-between gap-x-8 gap-y-8 md:grid-cols-2">
+                        <div class="flex items-center justify-end gap-x-5 lg:gap-x-8">
+                            <a href="insellerate"><img src="../assets/images/insellerate.png" alt="" class="h-36 max-w-fit rounded-md duration-300 ease-in-out hover:scale-110" /></a>
+                            <div>
+                                <a href="insellerate" class="mb-2 inline-flex items-center rounded-full text-sm uppercase tracking-widest text-dark hover:text-primary"><i class="las la-arrow-right mr-2 rotate-[135deg] text-xl md:text-xl"></i> Previous </a>
+                                <a href="insellerate" class="hover:text-primary"><h3 class="mb-1 text-2xl md:text-xl">Insellerate — Revolutionizing Mortgage Applications with User-Centric Mobile Design</h3></a>
+                                <a href="insellerate" class="uppercase hover:text-primary"
+                                    ><p class="mb-4 flex items-center font-light uppercase tracking-widest">
+                                        SaaS, Mortgage CRM <span class="ml-4 border-l pl-4"><img src="../assets/images/flag-USA.avif" alt="" class="h-6" /></span></p
+                                ></a>
+                            </div>
+                        </div>
+
+                        <div class="text-right">
+                            <div class="flex items-center justify-end gap-x-5 lg:gap-x-8">
+                                <div>
+                                    <a href="ad" class="mb-2 inline-flex items-center rounded-full uppercase tracking-widest text-dark hover:text-primary">Next Up <i class="las la-arrow-right ml-2 -rotate-45 text-xl md:text-3xl"></i></a>
+                                    <a href="ad" class="hover:text-primary"><h3 class="mb-1 text-2xl md:text-xl">Optimizing Design and Code for anydone: Crafting a Responsive, Pixel-Perfect Web Experience</h3></a>
+                                    <a href="ad" class="uppercase hover:text-primary"
+                                        ><p class="mb-4 flex items-center justify-end font-light uppercase tracking-widest">
+                                            SaaS, Productivity <span class="ml-4 border-l pl-4"><img src="../assets/images/flag-USA.avif" alt="" class="h-6" /></span></p
+                                    ></a>
+                                </div>
+                                <a href="ad"><img src="../assets/images/ad-web.png" alt="" class="h-36 max-w-fit rounded-md duration-300 ease-in-out hover:scale-110" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer-->
+        <footer class="bg-primary px-4 pb-8 pt-16 lg:pt-32">
+            <div class="mx-auto max-w-7xl text-center">
+                <p class="mb-4 uppercase tracking-widest">Need A Designer?</p>
+                <h1 class="mb-4 text-center text-3xl lg:text-6xl">Let's make something together</h1>
+                <p class="mx-auto max-w-3xl text-lg font-light lg:text-2xl">I help businesses, organizations and individuals from around the world bring their projects to life. I would love to help you too.</p>
+                <a href="../contact" class="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-2 uppercase tracking-widest text-dark hover:bg-green-100">Start a project <i class="las la-arrow-right ml-2 text-3xl"></i></a>
+                <!--Social Icons-->
+                <ul class="mt-10 flex justify-center space-x-4">
+                    <li>
+                        <a href="https://dribbble.com/milanmdhr" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-dribbble"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/milanmdhr/" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/uxmilan/" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark" target="_blank"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:milanmdhr@gmail.com" class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white p-1 text-center text-4xl text-white hover:border-dark hover:bg-dark"><i class="las la-envelope"></i></a>
+                    </li>
+                </ul>
+                <p class="mb-2 mt-10 text-sm text-green-900">&copy; 2024 All rights reserved.</p>
+                <p></p>
+                <p class="text-sm text-green-800">Designed & Coded with <i class="las la-heart animate-heart-beat text-red-600 opacity-100"></i> by Milan Manandhar</p>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <script>
+            new Glide('.glide', {
+                type: 'carousel',
+                perView: 4,
+                autoplay: 3000,
+                gap: 32,
+                startAt: 2,
+                focusAt: 'center',
+                breakpoints: {
+                    1280: {
+                        perView: 3,
+                        gap: 32,
+                        peek: {
+                            before: 60,
+                            after: 60,
+                        },
+                    },
+                    1024: {
+                        perView: 2,
+                        gap: 20,
+                    },
+                    768: {
+                        perView: 1,
+                        gap: 10,
+                        peek: {
+                            before: 30,
+                            after: 30,
+                        },
+                    },
+                },
+            }).mount()
+        </script>
+
+        <script>
+            let scrollpos = window.scrollY
+            const header = document.querySelector('nav')
+            const header_height = header.offsetHeight
+
+            const add_class_on_scroll = () => header.classList.add('fade-in', 'backdrop-blur')
+            const remove_class_on_scroll = () => header.classList.remove('fade-in', 'backdrop-blur')
+
+            window.addEventListener('scroll', function () {
+                scrollpos = window.scrollY
+
+                if (scrollpos >= header_height) {
+                    add_class_on_scroll()
+                } else {
+                    remove_class_on_scroll()
+                }
+            })
+        </script>
+
+        <script>
+            let mobscrollpos = window.scrollY
+            const mobheader = document.querySelector('header')
+            const mobheader_height = mobheader.offsetHeight
+
+            const mob_add_class_on_scroll = () => mobheader.classList.add('bg-dark')
+            const mob_remove_class_on_scroll = () => mobheader.classList.remove('bg-dark')
+
+            window.addEventListener('scroll', function () {
+                mobscrollpos = window.scrollY
+
+                if (mobscrollpos >= mobheader_height) {
+                    mob_add_class_on_scroll()
+                } else {
+                    mob_remove_class_on_scroll()
+                }
+            })
+        </script>
+    </body>
+</html>
